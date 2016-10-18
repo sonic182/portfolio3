@@ -5,7 +5,8 @@ var gulp       = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     babel = require('gulp-babel'),
     sass = require('gulp-sass'),
-    nodeResolve = require('rollup-plugin-node-resolve');
+    nodeResolve = require('rollup-plugin-node-resolve'),
+    spawn = require('child_process').spawn;
 
 const static_path = './public/static';
 
@@ -65,7 +66,7 @@ gulp.task('fonts', () => {
   .pipe(gulp.dest(`${static_path}/fonts`))
 })
 
-gulp.task('sass', function () {
+gulp.task('sass', () => {
  return gulp.src('./assets/scss/**/*.scss')
   // .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
@@ -73,7 +74,23 @@ gulp.task('sass', function () {
   .pipe(gulp.dest(`${static_path}`));
 })
 
-gulp.task('watch', ['scripts', 'sass', 'fonts'], () => {
+gulp.task('django', () => {
+  const runserver = spawn('./env/bin/python', ['manage.py', 'runserver']);
+
+  runserver.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+
+  runserver.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`);
+  });
+
+  runserver.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+})
+
+gulp.task('watch', ['scripts', 'sass', 'fonts', 'django'], () => {
   gulp.watch('assets/js/**/*.js', ['scripts'])
   gulp.watch('assets/scss/**/*.scss', ['sass'])
 })
