@@ -3,7 +3,7 @@
 var gulp       = require('gulp'),
     rollup     = require('gulp-rollup'),
     sourcemaps = require('gulp-sourcemaps'),
-    babel = require('rollup-plugin-babel'),
+    babel = require('gulp-babel'),
     sass = require('gulp-sass');
 
 gulp.task('scripts', () => {
@@ -12,10 +12,10 @@ gulp.task('scripts', () => {
       // transform the files here.
       .pipe(rollup({
         entry: './assets/js/main.js',
-        plugins: [
-          babel({ runtimeHelpers: true })
-        ]
       }))
+      .pipe(babel({
+            presets: ['es2015']
+        }))
     // .pipe(sourcemaps.write())
     .pipe(gulp.dest('./static'));
 })
