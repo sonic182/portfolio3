@@ -1,0 +1,11 @@
+.idea/
+*.pyc
+*.pyo
+*.pyd
+.vagrant/
+env/
+*.sqlite3
+static/*
+media/*
+bower_components/
+ignore/*
