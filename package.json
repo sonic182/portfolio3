@@ -24,6 +24,17 @@
     "rollup-plugin-node-resolve": "^2.0.0"
   },
   "dependencies": {
-    "rollup-plugin-babel": "^2.6.1"
+    "font-awesome": "^4.6.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "scrollmagic": "^2.0.5",
+    "velocity-animate": "^1.2.3"
+  },
+  "overrides": {
+    "scrollmagic": {
+      "main": [
+        "scrollmagic/uncompressed/ScrollMagic.js",
+        "scrollmagic/uncompressed/plugins/animation.velocity.js"
+      ]
+    }
   }
 }

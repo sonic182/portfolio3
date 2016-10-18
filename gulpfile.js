@@ -7,6 +7,8 @@ var gulp       = require('gulp'),
     sass = require('gulp-sass'),
     nodeResolve = require('rollup-plugin-node-resolve');
 
+const static_path = './public/static';
+
 gulp.task('scripts', () => {
   gulp.src('./assets/**/*.js')
     // .pipe(sourcemaps.init())
@@ -14,6 +16,7 @@ gulp.task('scripts', () => {
       .pipe(rollup({
         entry: './assets/js/main.js',
         allowRealFiles: true,
+        context: 'window',
         plugins: [
           nodeResolve({
            // use "jsnext:main" if possible
@@ -29,7 +32,7 @@ gulp.task('scripts', () => {
            // want to include, add it to 'skip'. Local and relative imports
            // can be skipped by giving the full filepath. E.g.,
            // `path.resolve('src/relative-dependency.js')`
-           skip: [ 'some-big-dependency' ],  // Default: []
+          //  skip: [ 'some-big-dependency' ],  // Default: []
 
            // some package.json files have a `browser` field which
            // specifies alternative files to load for people bundling
@@ -42,7 +45,7 @@ gulp.task('scripts', () => {
 
            // whether to prefer built-in modules (e.g. `fs`, `path`) or
            // local ones with the same names
-           preferBuiltins: false  // Default: true
+          //  preferBuiltins: false  // Default: true
 
          })
         ]
@@ -51,14 +54,15 @@ gulp.task('scripts', () => {
             presets: ['es2015']
         }))
     // .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./static'));
+    .pipe(gulp.dest(`${static_path}`));
 })
 
 gulp.task('fonts', () => {
   gulp.src([
-    './node_modules/bootstrap-sass/assets/fonts/bootstrap/*'
+    './node_modules/bootstrap-sass/assets/fonts/bootstrap/*',
+    './node_modules/font-awesome/fonts/*'
   ])
-  .pipe(gulp.dest('./static/fonts'))
+  .pipe(gulp.dest(`${static_path}/fonts`))
 })
 
 gulp.task('sass', function () {
@@ -66,7 +70,7 @@ gulp.task('sass', function () {
   // .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   // .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./static'));
+  .pipe(gulp.dest(`${static_path}`));
 })
 
 gulp.task('watch', ['scripts', 'sass', 'fonts'], () => {

@@ -1,3 +1,11 @@
 @import "./custom/variables";
 
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$fa-font-path:        "/static/fonts";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+
+// @import "../font-awesome/css/font-awesome.min.css";
+
+@import "./theme/style";
+@import "./theme/extras";
