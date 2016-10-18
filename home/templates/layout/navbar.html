@@ -1,19 +1,36 @@
 {% load static %}
+
+{# {% if request.path == '/' %}#}
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display--><img src="{% static "images/mogollon_full.svg" %}" alt="Logo" class="center-block">
+    <!-- Brand and toggle get grouped for better mobile display-->
+    <a href="{% url "homepage" %}">
+      <img src="{% static "images/mogollon_full.svg" %}" alt="Logo" class="center-block">
+    </a>
   </div>
   <!-- /.container-fluid-->
 </nav>
-<!-- Navigation--><a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle z-up"><i class="fa fa-bars"></i></a>
+{# {% endif %}#}
+<!-- Navigation-->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle z-up"><i class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper" class="z-up">
   <ul class="sidebar-nav"><a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+    {% if request.path == '/' %}
     <li class="sidebar-brand"><a href="#top" onclick="$(&quot;#menu-close&quot;).click();">Johanderson Mogollon</a></li>
     <li><a href="#top" onclick="$(&quot;#menu-close&quot;).click();">Inicio</a></li>
     <li><a href="#about" onclick="$(&quot;#menu-close&quot;).click();">Saber más</a></li>
     <li><a href="#services" onclick="$(&quot;#menu-close&quot;).click();">Servicios</a></li>
     <li><a href="#portfolio" onclick="$(&quot;#menu-close&quot;).click();">Portfolio</a></li>
     <li><a href="#footer" onclick="$(&quot;#menu-close&quot;).click();">Contacto</a></li>
+    {% else %}
+    <li class="sidebar-brand"><a href="/#top" onclick="$(&quot;#menu-close&quot;).click();">Johanderson Mogollon</a></li>
+    <li><a href="/#top" onclick="$(&quot;#menu-close&quot;).click();">Inicio</a></li>
+    <li><a href="/#about" onclick="$(&quot;#menu-close&quot;).click();">Saber más</a></li>
+    <li><a href="/#services" onclick="$(&quot;#menu-close&quot;).click();">Servicios</a></li>
+    <li><a href="/#portfolio" onclick="$(&quot;#menu-close&quot;).click();">Portfolio</a></li>
+    <li><a href="/#footer" onclick="$(&quot;#menu-close&quot;).click();">Contacto</a></li>
+    {% endif %}
+    <li><a href="{% url 'courses_index' %}">Cursos</a></li>
     <li>
       <hr><a href="http://blog.mogollon.com.ve" onclick="$(&quot;#menu-close&quot;).click();">Blog</a>
     </li>

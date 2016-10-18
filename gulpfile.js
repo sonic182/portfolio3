@@ -75,19 +75,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('django', () => {
-  const runserver = spawn('./env/bin/python', ['manage.py', 'runserver']);
-
-  runserver.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
-  });
-
-  runserver.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`);
-  });
-
-  runserver.on('close', (code) => {
-    console.log(`child process exited with code ${code}`);
-  });
+  const runserver = spawn('./env/bin/python', ['manage.py', 'runserver'], { stdio: 'inherit', stderr: 'inherit' });
 })
 
 gulp.task('watch', ['scripts', 'sass', 'fonts', 'django'], () => {

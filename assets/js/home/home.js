@@ -44,10 +44,11 @@ export function Home(){
 
       // build scene
       // trigger a velocity opaticy animation
-
-      var scene = new ScrollMagic.Scene({triggerElement: '.callout'})
-      .setVelocity('#animate', {opacity: 1}, {duration: 900})
-      .addTo(controller);
+      if ($('.callout').length != 0){
+        var scene = new ScrollMagic.Scene({triggerElement: '.callout'})
+        .setVelocity('#animate', {opacity: 1}, {duration: 900})
+        .addTo(controller);
+      }
 
       // .addIndicators() // add indicators (requires plugin)
       // trigger a velocity opaticy animation
@@ -56,10 +57,12 @@ export function Home(){
       .setClassToggle('.navbar-default','navbar-dark')
       .addTo(controller);
 
-      new ScrollMagic.Scene({triggerElement: '.call-to-action'})
-      // trigger a velocity opaticy animation
-      .setClassToggle('.navbar-default','navbar-gone')
-      .addTo(controller);
+      if ($('#footer').length != 0){
+        new ScrollMagic.Scene({triggerElement: '#footer'})
+        // trigger a velocity opaticy animation
+        .setClassToggle('.navbar-default','navbar-gone')
+        .addTo(controller);
+      }
 
     }());
 

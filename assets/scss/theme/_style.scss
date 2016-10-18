@@ -249,3 +249,8 @@ footer {
   opacity: 0;
   // margin-left: -2000
 }
+
+.my_container{
+  @extend .container;
+  padding-top: 70px;
+}
