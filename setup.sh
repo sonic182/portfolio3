@@ -15,4 +15,10 @@ case $1 in
 "secret")
   python -c 'import random; import string; print("".join([random.SystemRandom().choice("{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)) for i in range(50)]))'
 ;;
+"vps")
+ssh root@mogollon.com.ve
+;;
+"up")
+docker-compose build web && docker-compose up
+;;
 esac
