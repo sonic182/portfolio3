@@ -16,9 +16,12 @@ case $1 in
   python -c 'import random; import string; print("".join([random.SystemRandom().choice("{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)) for i in range(50)]))'
 ;;
 "vps")
-ssh root@mogollon.com.ve
+  ssh root@mogollon.com.ve
+;;
+"push")
+  git push && ssh root@mogollon.com.ve
 ;;
 "up")
-docker-compose build web && docker-compose up
+  docker-compose build web && docker-compose up --no-deps -d web
 ;;
 esac
