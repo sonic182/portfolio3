@@ -22,6 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 if env == 'production':
+    EMAIL_HOST = environ.get('EMAIL_HOST')
+    EMAIL_HOST_USER = environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = environ.get('EMAIL_HOST_PASSWORD')
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+
     SECRET_KEY = environ.get('SECRET_KEY')
     DEBUG = False
 elif env== 'test':

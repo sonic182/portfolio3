@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.core.mail import send_mail
+
 from courses.models import Course
 from courses.forms import StudentForm, MailListForm
 # Create your views here.
@@ -10,7 +12,14 @@ def index(request):
     if request.method == 'POST':
         form = MailListForm(request.POST)
         if form.is_valid():
-            form.save()
+            obj = form.save()
+            send_mail(
+                'Mail List Mogollon cursos',
+                'Nuevo inscrito en la lista de cursos: ' + obj.email,
+                'johanderson@mogollon.com.ve',
+                ['johander1822@gmail.com'],
+                fail_silently=False,
+            )
             return render(request, 'courses/index.html', {
                 'courses': courses,
                 'suscribed': True,
