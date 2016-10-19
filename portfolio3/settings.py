@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+environ = os.environ
+env = environ.get('PYTHON_ENV') or 'development'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,13 +21,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+v%(ju0tm#(qg8g0a+kcjkn#6$9tt8qbue3^ces^w$qqikhj=l'
+if env == 'production':
+    SECRET_KEY = environ.get('SECRET_KEY')
+    DEBUG = False
+elif env== 'test':
+    SECRET_KEY = '+v%(ju0tm#(qg8g0a+kcjkn#6$9tt8qbue3^ces^w$qqikhj=l'
+    DEBUG = True
+else: # development
+    SECRET_KEY = '+v%(ju0tm#(qg8g0a+kcjkn#6$9tt8qbue3^ces^w$qqikhj=l'
+    DEBUG = True
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,12 +85,20 @@ WSGI_APPLICATION = 'portfolio3.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+if env == 'production':
+    DATABASES = {
+        'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db/production.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -122,13 +137,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = environ.get('STATIC_URL') or  '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "public/static")
 
-MEDIA_URL = '/media/'
+MEDIA_URL = environ.get('MEDIA_URL') or  '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "public/media")
 
 # CKEDITOR

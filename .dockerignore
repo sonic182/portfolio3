@@ -10,6 +10,12 @@ media/*
 node_modules/
 ignore/*
 
+
+
+
 public/static/
 public/media/
 media/
+log/
+.data/
+db/

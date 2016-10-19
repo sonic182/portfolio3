@@ -4,12 +4,15 @@ PYTHON='./env/bin/python'
 
 case $1 in
 "run")
-echo "gulp watch starts a django dev server"
-# $PYTHON manage.py runserver & gulp watch && fg
-gulp watch
+  echo "gulp watch starts a django dev server"
+  # $PYTHON manage.py runserver & gulp watch && fg
+  gulp watch
 ;;
 "migrate")
-$PYTHON manage.py makemigrations
-$PYTHON manage.py migrate
+  $PYTHON manage.py makemigrations
+  $PYTHON manage.py migrate
+;;
+"secret")
+  python -c 'import random; import string; print("".join([random.SystemRandom().choice("{}{}{}".format(string.ascii_letters, string.digits, string.punctuation)) for i in range(50)]))'
 ;;
 esac

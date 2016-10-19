@@ -17,8 +17,6 @@ RUN pip install -r requirements.txt
 ADD . /app/
 RUN chmod +x entrypoint.sh \
     && gulp build \
-    && touch log/uwsgi.log \
-    && chmod +r log/uwsgi.log \
     && python manage.py collectstatic --noinput
 
 ENTRYPOINT ["/app/entrypoint.sh"]

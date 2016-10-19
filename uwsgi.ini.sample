@@ -1,0 +1,25 @@
+# mysite_uwsgi.ini file
+[uwsgi]
+processes = 1
+threads = 1
+
+# Django-related settings
+# the base directory (full path)
+# chdir           = /path/to/your/project
+# Django's wsgi file
+module          = portfolio3.wsgi
+# the virtualenv (full path)
+# home            = /path/to/virtualenv
+
+# process-related settings
+# master
+master          = true
+# maximum number of worker processes
+processes       = 1
+# the socket (use the full path to be safe
+# socket          = /path/to/your/project/mysite.sock
+# ... with appropriate permissions - may be needed
+# chmod-socket    = 664
+# clear environment on exit
+vacuum          = true
+http          = :8000
