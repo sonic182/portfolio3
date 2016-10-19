@@ -8,7 +8,7 @@ var gulp       = require('gulp'),
     nodeResolve = require('rollup-plugin-node-resolve'),
     spawn = require('child_process').spawn;
 
-const static_path = './public/static';
+const static_path = './static';
 
 gulp.task('scripts', () => {
   gulp.src('./assets/**/*.js')

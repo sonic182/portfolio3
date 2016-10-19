@@ -9,9 +9,9 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <ul class="list-unstyled">
-            <li>Fecha de Inicio: <b>18/08/2017</b></li>
-            <li>Dado por: <b>Johanderson</b></li>
-            <li class="text-primary">Inscritos: 300</li>
+            <li>Fecha de Inicio: <b>{{course.start_date|date}}</b></li>
+            <li>Dado por: <b>{{course.author}}</b></li>
+            <li class="text-primary">Inscritos: <b>{{course.student_set.count}}</b></li>
           </ul>
           <hr>
           <form class="" action="" method="post">
@@ -36,11 +36,9 @@
       </div>
     </div>
     <div class="col-md-9">
-      <img src="//placekitten.com/1200/300" alt="" class="img-responsive" />
+      <img src="{{course.picture.url}}" alt="" class="img-responsive" />
       <div class="course_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id diam quis odio hendrerit consequat. Quisque consectetur euismod quam, vitae interdum nisl laoreet id. Morbi lacinia neque dolor. Nullam lectus velit, hendrerit et augue id, blandit porttitor orci. Vestibulum varius ipsum quis tortor pharetra, a commodo turpis suscipit. Aenean id condimentum libero. Maecenas enim nunc, sagittis non leo quis, pharetra faucibus diam. Mauris ullamcorper turpis ac urna sagittis, eget congue dui aliquam.
-
-        Maecenas eget rutrum orci, et sodales ligula. Maecenas convallis gravida magna, sed luctus neque accumsan sit amet. Sed ullamcorper nulla sit amet enim porta pharetra. Donec tincidunt magna non nunc vestibulum tincidunt. Etiam laoreet, metus quis condimentum ornare, diam ipsum dapibus dui, in sagittis eros sem vel metus. Praesent tellus justo, pharetra et auctor eu, auctor et nibh. Nulla orci magna, faucibus non molestie at, porta et libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        {{course.description}}
       </div>
 
     </div>

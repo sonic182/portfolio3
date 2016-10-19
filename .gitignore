@@ -11,4 +11,5 @@ node_modules/
 ignore/*
 
 public/static/
+public/media/
 media/
