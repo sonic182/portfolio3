@@ -2,32 +2,28 @@
 {% load staticfiles %}
 {% block content %}
 
-<!-- Header-->
 <header id="top" class="header">
   <div class="text-vertical-center">
     <h1>Johanderson Mogollon</h1>
     <h3>Full-Stack Developer and DevOps-Linux Cowboy</h3><br><a href="#about" class="btn btn-dark btn-lg">Saber más</a>
   </div>
 </header>
-<!-- About-->
+
 <section id="about" class="about">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>¿Piensas en tu negocio?</h2>
         <p class="lead">Internet es tu mejor amigo cuando se trata de mejorar las ventas de tu negocio, <br>          con tu página web podrás hacer que los clientes llegen a tí de una manera única.</p>
-        <!-- <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
       </div>
       <div class="col-lg-12 text-center">
         <h2>¿Quieres un software que haga el trabajo por tí?</h2>
         <p class="lead">La Tecnología está para ayudar a todos <br>          con el software ideal podrás ayudarte en tu día a día.</p>
-        <!-- <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>-->
       </div>
     </div>
-    <!-- /.row-->
   </div>
-  <!-- /.container-->
 </section>
+
 <!-- Services-->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/-->
 <section id="services" class="services bg-primary">
@@ -99,92 +95,54 @@
       <div class="col-lg-10 col-lg-offset-1 text-center">
         <h2 id="trabajos">Trabajos</h2>
         <hr class="small">
-        <!--
-        <div class="col-md-6">
-        <div class="portfolio-item">
-        <a href="#">
-        <img class="img-portfolio img-responsive" src="{% static "images/portfolio-1.jpg" %}">
-      </a>
+        <div class="row section">
+          <div class="col-md-6">
+            <div class="portfolio-item"><a><img src="{% static "images/portfolio-2.jpg" %}" alt="Eyr preview" class="img-portfolio img-responsive gray-bordered"></a></div>
+          </div>
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <h3>Envío y recepción</h3>
+              <p><a href="http://rubyonrails.org/" target="_blank">Rails</a><br><a href="https://angularjs.org/" target="_blank">Angular</a><br>                Muchos detalles... <br>                Proyecto privado<br><br>
+                <!-- <a href="http://eyr.mogollon.com.ve" target="_blank" class="btn btn-lg btn-dark">Ver más</a>-->
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row section">
+          <div class="col-md-6 pull-right">
+            <div class="portfolio-item"><a><img src="{% static "images/portfolio-5.jpg" %}" alt="Inmoduran" class="img-portfolio img-responsive gray-bordered"></a></div>
+          </div>
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <h3>Inmoduran</h3>
+              <p>Inmobiliaria en alicante <br>                Creada desde mi sistema base inmobiliario <br>                Super optimizada, SEO, Page Loading <br><br>
+                <a href="http://www.inmoduran.net/" target="_blank" class="btn btn-lg btn-dark">Ver más</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row section">
+          <div class="col-md-6">
+            <div class="portfolio-item"><a><img src="https://raw.githubusercontent.com/sonic182/phoenixChat/master/extras/screen.jpg" alt="Inmoduran" class="img-portfolio img-responsive gray-bordered"></a></div>
+          </div>
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <h3>Simple Chat</h3>
+              <p>Un simple chat <br>                HTML5 Websockets, <a target="_blank" href="http://elixir-lang.org">elixir language</a><br><a target="_blank" href="http://www.phoenixframework.org">Phoenix Framework</a><br><br>
+                <a href="https://github.com/sonic182/phoenixChat" target="_blank" class="btn"><i class="fa fa-github fa-lg"></i> Repo</a><br><a href="https://warm-meadow-51920.herokuapp.com" target="_blank" class="btn btn-lg btn-dark">Ver más</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-lg-10-->
     </div>
+    <!-- /.row-->
   </div>
--->
-<div class="row section">
-  <div class="col-md-6">
-    <div class="portfolio-item"><a><img src="{% static "images/portfolio-2.jpg" %}" alt="Eyr preview" class="img-portfolio img-responsive gray-bordered"></a></div>
-  </div>
-  <div class="col-md-6">
-    <div class="portfolio-item">
-      <h3>Envío y recepción</h3>
-      <p><a href="http://rubyonrails.org/" target="_blank">Rails</a><br><a href="https://angularjs.org/" target="_blank">Angular</a><br>                Muchos detalles... <br>                Proyecto privado<br><br>
-        <!-- <a href="http://eyr.mogollon.com.ve" target="_blank" class="btn btn-lg btn-dark">Ver más</a>-->
-      </p>
-    </div>
-  </div>
-</div>
-<hr>
-<!--
-<div class="row section">
-<div class="col-md-6">
-<div class="portfolio-item">
-<h3>Inmobiliaria</h3>
-<p>
-<a href="https://www.djangoproject.com/" target="_blank">Django</a> 1.8 <br>
-Jquery 2.1.4 <br>
-Software para ser vendido <br> personalizando el diseño <br> al gusto. <br> <br>
-<a href="http://inmo.mogollon.com.ve/" target="_blank" class="btn btn-lg btn-dark">Ver más</a>
-</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="portfolio-item">
-<a>
-<img class="img-portfolio img-responsive gray-bordered" src="{% static "images/portfolio-4.jpg" %}" alt="Inmo preview">
-</a>
-</div>
-</div>
-</div>
--->
-<div class="row section">
-  <div class="col-md-6 pull-right">
-    <div class="portfolio-item"><a><img src="{% static "images/portfolio-5.jpg" %}" alt="Inmoduran" class="img-portfolio img-responsive gray-bordered"></a></div>
-  </div>
-  <div class="col-md-6">
-    <div class="portfolio-item">
-      <h3>Inmoduran</h3>
-      <p>Inmobiliaria en alicante <br>                Creada desde mi sistema base inmobiliario <br>                Super optimizada, SEO, Page Loading <br><br>
-        <!--
-        <a href="https://www.djangoproject.com/" target="_blank">Django</a> 1.8 <br>
-        Jquery 2.1.4 <br>
-        Software para ser vendido <br> personalizando el diseño <br> al gusto. <br> <br>
-      --><a href="http://www.inmoduran.net/" target="_blank" class="btn btn-lg btn-dark">Ver más</a>
-    </p>
-  </div>
-</div>
-</div>
-<div class="row section">
-  <div class="col-md-6">
-    <div class="portfolio-item"><a><img src="https://raw.githubusercontent.com/sonic182/phoenixChat/master/extras/screen.jpg" alt="Inmoduran" class="img-portfolio img-responsive gray-bordered"></a></div>
-  </div>
-  <div class="col-md-6">
-    <div class="portfolio-item">
-      <h3>Simple Chat</h3>
-      <p>Un simple chat <br>                HTML5 Websockets, <a target="_blank" href="http://elixir-lang.org">elixir language</a><br><a target="_blank" href="http://www.phoenixframework.org">Phoenix Framework</a><br><br>
-        <!--
-        <a href="https://www.djangoproject.com/" target="_blank">Django</a> 1.8 <br>
-        Jquery 2.1.4 <br>
-        Software para ser vendido <br> personalizando el diseño <br> al gusto. <br> <br>
-      --><a href="https://github.com/sonic182/phoenixChat" target="_blank" class="btn"><i class="fa fa-github fa-lg"></i> Repo</a><br><a href="https://warm-meadow-51920.herokuapp.com" target="_blank" class="btn btn-lg btn-dark">Ver más</a>
-    </p>
-  </div>
-</div>
-</div>
-</div>
-<!-- /.col-lg-10-->
-</div>
-<!-- /.row-->
-</div>
-<!-- /.container-->
+  <!-- /.container-->
 </section>
+
 <!-- Call to Action-->
 <aside class="call-to-action bg-primary">
   <div class="container">
@@ -204,6 +162,7 @@ Software para ser vendido <br> personalizando el diseño <br> al gusto. <br> <br
   </div>
 </div>
 </aside>
+
 <!-- Map-->
 <!--
 <section id="contact">
