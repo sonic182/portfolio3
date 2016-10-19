@@ -21,6 +21,9 @@ case $1 in
 "push")
   git push && ssh root@mogollon.com.ve
 ;;
+"pull")
+  git pull && sh setup.sh up
+;;
 "up")
   docker-compose build web && docker-compose up --no-deps -d web
 ;;
