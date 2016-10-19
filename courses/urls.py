@@ -8,5 +8,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='courses_index'),
-    url(r'^(?P<id>[0-9]+)$', views.show, name='courses_show')
+    url(r'^(?P<id>[0-9]+)$', views.show, name='courses_show'),
+    url(r'^thanks$', views.thanks, name='courses_thanks'),
 ]

@@ -6,6 +6,17 @@
     </div>
 
     <div class="courses">
+      {% if courses.count == 0 %}
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="text-center">
+            <h3>En estos momentos no hay cursos disponibles</h3>
+            {% include "courses/mail_list.html" %}
+          </div>
+
+        </div>
+      </div>
+      {% else %}
 
       <div class="row">
         {% for course in courses %}
@@ -29,7 +40,7 @@
                     <div class="panel-body">
                       <h3>{{course.title}}</h3>
                       <span class="text-muted">
-                        Start date: <b>{{course.start_date|date}}</b>
+                        Fecha de Inicio: <b>{{course.start_date|date}}</b>
                       </span>
                     </div>
 
@@ -40,6 +51,9 @@
           </div>
           {% endfor %}
         </div>
+        {% include "courses/mail_list.html" %}
+
+      {% endif %}
 
     </div>
 

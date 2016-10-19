@@ -32,3 +32,9 @@
 h1{
   font-size: 4.5em;
 }
+
+.bootstrap_form{
+    input, textarea, select{
+      @extend .form-control;
+    }
+}

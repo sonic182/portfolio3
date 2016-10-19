@@ -29,3 +29,6 @@ class Student(models.Model):
         if self.first_name:
             return self.first_name + ' ' + self.last_name
         return self.name
+
+class MailList(models.Model):
+    email = models.EmailField(max_length=100, unique=True)
