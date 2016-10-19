@@ -16,7 +16,6 @@
     <meta name="author" content="@sonic1182">
 
     <link rel="stylesheet" href="{% static "app.css" %}" media="screen" >
-    <script src="{% static "js/main.js" %}"></script>
   </head>
   <body>
     {% include "layout/navbar.html" %}
@@ -24,5 +23,6 @@
     {% endblock %}
 
     {% include "layout/footer.html" %}
+    <script async src="{% static "js/main.js" %}"></script>
   </body>
 </html>
