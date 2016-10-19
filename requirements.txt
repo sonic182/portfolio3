@@ -2,3 +2,4 @@ Django==1.10.2
 django-ckeditor==5.1.1
 django-widget-tweaks==1.4.1
 Pillow==3.4.2
+uWSGI==2.0.14
