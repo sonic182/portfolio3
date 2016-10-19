@@ -1,11 +1,12 @@
 from django.db import models
-
+# from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 class Course(models.Model):
     picture = models.ImageField(upload_to='courses_pics')
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    description = RichTextUploadingField()
     author = models.CharField(max_length=100, default='Johanderson')
     start_date = models.DateTimeField(blank=True, null=True)
     active = models.BooleanField(default=False)
@@ -21,7 +22,7 @@ class Student(models.Model):
     email = models.EmailField(max_length=100)
     phone = models.CharField(max_length=100)
     birthdate = models.DateField(blank=True, null=True)
-    courses = models.ForeignKey(Course)
+    course = models.ForeignKey(Course)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self):

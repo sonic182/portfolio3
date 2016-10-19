@@ -24,7 +24,8 @@ from home import views as home_views
 urlpatterns = [
     url(r'^$', home_views.home, name='homepage'),
     url(r'^admin/', admin.site.urls),
-    url(r'^courses/', include('courses.urls'))
+    url(r'^courses/', include('courses.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

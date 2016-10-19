@@ -28,3 +28,9 @@
     padding: 15px 0px;
   }
 }
+
+.student_form{
+    input, textarea{
+      @extend .form-control;
+    }
+}
