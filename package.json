@@ -20,7 +20,9 @@
     "gulp-rollup": "^2.5.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.1.1",
+    "gulp-uglify": "^2.0.0",
     "jquery": "^2.2.4",
+    "pump": "^1.0.1",
     "rollup-plugin-node-resolve": "^2.0.0"
   },
   "dependencies": {
