@@ -1,7 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="my_container">
-  <h1>Course</h1>
+<div class="my_container courses_show">
+  <div class="text-center">
+    <h1>Course</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            <li>Fecha de Inicio: <b>18/08/2017</b></li>
+            <li>Dado por: <b>Johanderson</b></li>
+            <li class="text-primary">Inscritos: 300</li>
+          </ul>
+          <hr>
+          <form class="" action="" method="post">
+            <div class="form-group">
+              <label for="">Nombre</label>
+              <input type="text" name="name" value="" class="form-control" placeholder="Ej: Juan Gonzales">
+            </div>
+            <div class="form-group">
+              <label for="">Correo</label>
+              <input type="text" name="name" value="" class="form-control" placeholder="Ej: micorreo@hotmail.com">
+            </div>
+            <div class="form-group">
+              <label for="">Teléfono</label>
+              <input type="text" name="name" value="" class="form-control" placeholder="Ej: 637 284 881">
+            </div>
+          </form>
+          <button type="button" class="btn btn-primary btn-block">Suscribirme!</button>
+          <div class="form-group">
+            <small class="text-muted">Tus datos solo serán utilizados por mi para contactarnos y organizar el grupo, en ningún momento serán dado a terceros.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <img src="//placekitten.com/1200/300" alt="" class="img-responsive" />
+      <div class="course_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id diam quis odio hendrerit consequat. Quisque consectetur euismod quam, vitae interdum nisl laoreet id. Morbi lacinia neque dolor. Nullam lectus velit, hendrerit et augue id, blandit porttitor orci. Vestibulum varius ipsum quis tortor pharetra, a commodo turpis suscipit. Aenean id condimentum libero. Maecenas enim nunc, sagittis non leo quis, pharetra faucibus diam. Mauris ullamcorper turpis ac urna sagittis, eget congue dui aliquam.
+
+        Maecenas eget rutrum orci, et sodales ligula. Maecenas convallis gravida magna, sed luctus neque accumsan sit amet. Sed ullamcorper nulla sit amet enim porta pharetra. Donec tincidunt magna non nunc vestibulum tincidunt. Etiam laoreet, metus quis condimentum ornare, diam ipsum dapibus dui, in sagittis eros sem vel metus. Praesent tellus justo, pharetra et auctor eu, auctor et nibh. Nulla orci magna, faucibus non molestie at, porta et libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </div>
+
+    </div>
+  </div>
 
 </div>
 {% endblock %}

@@ -53,9 +53,15 @@
   background-color: white;
   border-bottom: 0px;
   margin-bottom: 0px;
+  // border-bottom: 2px solid white;
   // padding: 3px;
   transition: 0.7s ease;
   -webkit-transition: 0.7s ease;
+
+  .navbar-nav > li > a {
+    color: $text-muted;
+  }
+
   img{
     height: 70px;
     transition: 0.7s ease;
@@ -63,20 +69,30 @@
   }
 }
 
-.navbar-dark{
-  background-color: rgba(255, 255, 255, 0.75);
-  // border-bottom: 2px solid white;
-  img{
-    height: 55px;
-  }
-}
-
-.navbar-gone{
-  img{
-    opacity: 0;
-    visibility: hidden;
-  }
-  background-color: transparent;
-  border: 0px;
-  // background-color: red;
-}
+// .navbar-dark{
+//   // background-color: rgba(255, 255, 255, 0.75);
+//   background-color: $brand-info;
+//   // .navbar-nav > li > a {
+//   //   color: white;
+//   // }
+//   // border-bottom: 2px solid $text-muted;
+//   img{
+//     height: 55px;
+//   }
+// }
+//
+// .navbar-gone{
+//   // border-bottom: 2px solid $brand-mogollon;
+//   img{
+//     // opacity: 0;
+//     // visibility: hidden;
+//   }
+//   // background-color: transparent;
+//   // background-color: rgba(56, 56, 56, 0.82);
+//   background-color: white;
+//   border: 0px;
+//   .navbar-nav > li > a {
+//     color: $text-muted;
+//   }
+//   // background-color: red;
+// }

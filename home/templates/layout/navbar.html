@@ -1,38 +1,128 @@
 {% load static %}
 
 {# {% if request.path == '/' %}#}
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display-->
-    <a href="{% url "homepage" %}">
-      <img src="{% static "images/mogollon_full.svg" %}" alt="Logo" class="center-block">
-    </a>
-  </div>
-  <!-- /.container-fluid-->
+{% comment %}
+
+<nav class="navbar navbar-default navbar-home">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display-->
+<a href="{% url "homepage" %}">
+<div class="logo_home">
+<img src="{% static "images/mogollon_full.svg" %}" alt="Logo" class="center-block">
+</div>
+</a>
+</div>
+<!-- /.container-fluid-->
 </nav>
+{% endcomment %}
 {# {% endif %}#}
-<!-- Navigation-->
+
+
+<nav id="navbar_default" class="navbar navbar-default navbar-home">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand navbar-logo-link" href="{% url 'homepage' %}">
+        <img src="{% static "images/mogollon_full.svg" %}" alt="Logo" class="center-block">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {# <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>#}
+        {# <li><a href="#">Link</a></li>#}
+        {% comment %}
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        {% endcomment %}
+      </ul>
+      {% comment %}
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      {% endcomment %}
+      <ul class="nav navbar-nav navbar-right">
+        {% if request.path == '/' %}
+        <li><a href="#navbar_default">Inicio</a></li>
+        <li><a href="#about">Saber más</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#footer">Contacto</a></li>
+        {% else %}
+        {# <li class="sidebar-brand"><a href="/#navbar_default">Johanderson Mogollon</a></li>#}
+        <li><a href="{% url 'homepage' %}">Inicio</a></li>
+        <li><a href="/#about">Saber más</a></li>
+        <li><a href="/#services">Servicios</a></li>
+        <li><a href="/#portfolio">Portfolio</a></li>
+        <li><a href="/#footer">Contacto</a></li>
+        {% endif %}
+        <li><a href="http://blog.mogollon.com.ve">Blog</a></li>
+        <li class="nav_courses"><a href="{% url 'courses_index' %}">Cursos</a></li>
+        {% comment %}
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        {% endcomment %}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<!-- Navigation old-->
+{% comment %}
 <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle z-up"><i class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper" class="z-up">
-  <ul class="sidebar-nav"><a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-    {% if request.path == '/' %}
-    <li class="sidebar-brand"><a href="#top" onclick="$(&quot;#menu-close&quot;).click();">Johanderson Mogollon</a></li>
-    <li><a href="#top" onclick="$(&quot;#menu-close&quot;).click();">Inicio</a></li>
-    <li><a href="#about" onclick="$(&quot;#menu-close&quot;).click();">Saber más</a></li>
-    <li><a href="#services" onclick="$(&quot;#menu-close&quot;).click();">Servicios</a></li>
-    <li><a href="#portfolio" onclick="$(&quot;#menu-close&quot;).click();">Portfolio</a></li>
-    <li><a href="#footer" onclick="$(&quot;#menu-close&quot;).click();">Contacto</a></li>
-    {% else %}
-    <li class="sidebar-brand"><a href="/#top" onclick="$(&quot;#menu-close&quot;).click();">Johanderson Mogollon</a></li>
-    <li><a href="/#top" onclick="$(&quot;#menu-close&quot;).click();">Inicio</a></li>
-    <li><a href="/#about" onclick="$(&quot;#menu-close&quot;).click();">Saber más</a></li>
-    <li><a href="/#services" onclick="$(&quot;#menu-close&quot;).click();">Servicios</a></li>
-    <li><a href="/#portfolio" onclick="$(&quot;#menu-close&quot;).click();">Portfolio</a></li>
-    <li><a href="/#footer" onclick="$(&quot;#menu-close&quot;).click();">Contacto</a></li>
-    {% endif %}
-    <li><a href="{% url 'courses_index' %}">Cursos</a></li>
-    <li>
-      <hr><a href="http://blog.mogollon.com.ve" onclick="$(&quot;#menu-close&quot;).click();">Blog</a>
-    </li>
-  </ul>
+<ul class="sidebar-nav"><a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+{% if request.path == '/' %}
+<li class="sidebar-brand"><a href="#top" onclick="$(&quot;#menu-close&quot;).click();">Johanderson Mogollon</a></li>
+<li><a href="#top" onclick="$(&quot;#menu-close&quot;).click();">Inicio</a></li>
+<li><a href="#about" onclick="$(&quot;#menu-close&quot;).click();">Saber más</a></li>
+<li><a href="#services" onclick="$(&quot;#menu-close&quot;).click();">Servicios</a></li>
+<li><a href="#portfolio" onclick="$(&quot;#menu-close&quot;).click();">Portfolio</a></li>
+<li><a href="#footer" onclick="$(&quot;#menu-close&quot;).click();">Contacto</a></li>
+{% else %}
+<li class="sidebar-brand"><a href="/#top" onclick="$(&quot;#menu-close&quot;).click();">Johanderson Mogollon</a></li>
+<li><a href="/#top" onclick="$(&quot;#menu-close&quot;).click();">Inicio</a></li>
+<li><a href="/#about" onclick="$(&quot;#menu-close&quot;).click();">Saber más</a></li>
+<li><a href="/#services" onclick="$(&quot;#menu-close&quot;).click();">Servicios</a></li>
+<li><a href="/#portfolio" onclick="$(&quot;#menu-close&quot;).click();">Portfolio</a></li>
+<li><a href="/#footer" onclick="$(&quot;#menu-close&quot;).click();">Contacto</a></li>
+{% endif %}
+<hr>
+<li><a href="{% url 'courses_index' %}">Cursos</a></li>
+<li>
+<a href="http://blog.mogollon.com.ve" onclick="$(&quot;#menu-close&quot;).click();">Blog</a>
+</li>
+</ul>
 </nav>
+
+{% endcomment %}

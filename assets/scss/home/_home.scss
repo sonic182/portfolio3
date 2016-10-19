@@ -1,0 +1,34 @@
+
+.logo_home{
+  // border-bottom: 3px solid $brand-mogollon;
+  // margin-bottom: 5px;
+  // transition: all 0.4s ease;
+  // -webkit-transition: all 0.4s ease;
+}
+
+// .logo_home:hover::after{
+//   width: 175px;
+//   background-color: $brand-mogollon;
+// }
+//
+// .logo_home::after{
+//   transition: all 0.4s ease;
+//   -webkit-transition: all 0.4s ease;
+//
+//   display: table;
+//   content: ' ';
+//   background-color: $text-muted;
+//   height: 3px;
+//   width: 95px;
+//   margin: 0px auto;
+//   margin-bottom: 5px;
+// }
+
+.my_container{
+  @extend .container;
+  // padding-top: 70px;
+}
+
+h1{
+  font-size: 4.5em;
+}

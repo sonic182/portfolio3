@@ -1,0 +1,25 @@
+.navbar-home{
+  // position: fixed;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+}
+
+
+.navbar-logo-link{
+  padding: 2px;
+  img{
+    height: 100%;
+    width: auto;
+  }
+}
+
+.nav_courses{
+  background-color: $brand-mogollon;
+  a{
+    color: white !important;
+  }
+  a:hover{
+    color: darken(white, 10) !important;
+  }
+}
