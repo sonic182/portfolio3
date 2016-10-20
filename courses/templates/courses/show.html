@@ -12,7 +12,7 @@
         {{course.description|safe}}
       </div>
     </div>
-    <div class="col-sm-4 col-md-3 pull-left">
+    <div class="col-sm-4 col-md-3 pull-left course_info_md">
       <div class="subscription_form">
         <form action="{% url 'courses_show' id=course.id %}" method="post" class="panel panel-default bootstrap_form">
           {% csrf_token %}
@@ -20,8 +20,12 @@
             <ul class="list-unstyled">
               <li>Fecha de Inicio: <b>{{course.start_date|date}}</b></li>
               <li>Dado por: <b>{{course.author}}</b></li>
-              <li class="text-primary">Inscritos: <b>{{course.student_set.count}}</b></li>
+              <li>Lugar: <b>{{course.place}}</b></li>
+              <li>Horario: <b>{{course.schedule}}</b></li>
+              <li>Precio: <b>{{course.price}}</b></li>
+              {# <li class="text-primary">Inscritos: <b>{{course.student_set.count}}</b></li>#}
             </ul>
+            {# <small class="text-muted">Inscribete pronto para organizar los horarios</small>#}
             <hr>
             <div class="form-group">
               {# <label for="">Nombre</label>#}

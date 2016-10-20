@@ -6,7 +6,7 @@ export function Courses () {
   // .addTo(controller);
 
   var elem = $('.subscription_form');
-  var elem2 = $('.course_info');
+  var elem2 = $('.course_info_md');
   var $window = $(window)
 
   if (elem.length != 0){

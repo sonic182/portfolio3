@@ -19,6 +19,7 @@ case $1 in
   ssh root@mogollon.com.ve
 ;;
 "push")
+  git push bitbucket master
   git push && ssh root@mogollon.com.ve
 ;;
 "pull")
