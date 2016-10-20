@@ -17,15 +17,24 @@ from django.conf.urls import url, include
 from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
 
 from home import views as home_views
+from home.sitemap import HomeSitemap
+from courses.sitemap import CoursesSitemap, CoursesStaticSitemap
 
+sitemaps = {
+    'HomeSitemap': HomeSitemap,
+    'CoursesSitemap': CoursesSitemap,
+    'CoursesStaticSitemap': CoursesStaticSitemap
+}
 
 urlpatterns = [
     url(r'^$', home_views.home, name='homepage'),
     url(r'^admin/', admin.site.urls),
     url(r'^courses/', include('courses.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap')
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
