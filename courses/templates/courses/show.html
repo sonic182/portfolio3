@@ -6,50 +6,51 @@
     <h1 class="course-title">{{course.title}}</h1>
   </div>
   <div class="row">
-    <div class="col-md-3">
-      <form action="{% url 'courses_show' id=course.id %}" method="post" class="panel panel-default bootstrap_form">
-        {% csrf_token %}
-        <div class="panel-body">
-          <ul class="list-unstyled">
-            <li>Fecha de Inicio: <b>{{course.start_date|date}}</b></li>
-            <li>Dado por: <b>{{course.author}}</b></li>
-            <li class="text-primary">Inscritos: <b>{{course.student_set.count}}</b></li>
-          </ul>
-          <hr>
-          <div class="form-group">
-            {# <label for="">Nombre</label>#}
-            {# <input type="text" name="name" value="" class="form-control" placeholder="Ej: Juan Gonzales">#}
-            {{form.name.errors}}
-            {{form.name.label_tag}}
-            {{form.name|attr:'placeholder:Ej: Juan Gonzales'}}
-          </div>
-          <div class="form-group">
-            {# <label for="">Correo</label>#}
-            {# <input type="text" name="name" value="" class="form-control" placeholder="Ej: micorreo@hotmail.com">#}
-            {{form.email.errors}}
-            {{form.email.label_tag}}
-            {{form.email|attr:'placeholder:Ej: micorreo@hotmail.com'}}
-          </div>
-          <div class="form-group">
-            {# <label for="">Teléfono</label>#}
-            {# <input type="text" name="name" value="" class="form-control" placeholder="Ej: 637 284 881">#}
-            {{form.phone.errors}}
-            {{form.phone.label_tag}}
-            {{form.phone|attr:'placeholder:Ej: 637 284 881'}}
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Suscribirme!</button>
-          <div class="form-group">
-            <small class="text-muted">Tus datos solo serán utilizados por mi para contactarnos y organizar el grupo, en ningún momento serán dado a terceros.</small>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="col-md-9">
+    <div class="col-sm-8 col-md-9 pull-right">
       <img src="{{course.picture.url}}" alt="" class="img-responsive" />
       <div class="course_info">
         {{course.description|safe}}
       </div>
-
+    </div>
+    <div class="col-sm-4 col-md-3 pull-left">
+      <div class="subscription_form">
+        <form action="{% url 'courses_show' id=course.id %}" method="post" class="panel panel-default bootstrap_form">
+          {% csrf_token %}
+          <div class="panel-body">
+            <ul class="list-unstyled">
+              <li>Fecha de Inicio: <b>{{course.start_date|date}}</b></li>
+              <li>Dado por: <b>{{course.author}}</b></li>
+              <li class="text-primary">Inscritos: <b>{{course.student_set.count}}</b></li>
+            </ul>
+            <hr>
+            <div class="form-group">
+              {# <label for="">Nombre</label>#}
+              {# <input type="text" name="name" value="" class="form-control" placeholder="Ej: Juan Gonzales">#}
+              {{form.name.errors}}
+              {{form.name.label_tag}}
+              {{form.name|attr:'placeholder:Ej: Juan Gonzales'}}
+            </div>
+            <div class="form-group">
+              {# <label for="">Correo</label>#}
+              {# <input type="text" name="name" value="" class="form-control" placeholder="Ej: micorreo@hotmail.com">#}
+              {{form.email.errors}}
+              {{form.email.label_tag}}
+              {{form.email|attr:'placeholder:Ej: micorreo@hotmail.com'}}
+            </div>
+            <div class="form-group">
+              {# <label for="">Teléfono</label>#}
+              {# <input type="text" name="name" value="" class="form-control" placeholder="Ej: 637 284 881">#}
+              {{form.phone.errors}}
+              {{form.phone.label_tag}}
+              {{form.phone|attr:'placeholder:Ej: 637 284 881'}}
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Suscribirme!</button>
+            <div class="form-group">
+              <small class="text-muted">Tus datos solo serán utilizados por mi para contactarnos y organizar el grupo, en ningún momento serán dado a terceros.</small>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
