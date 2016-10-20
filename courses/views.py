@@ -9,6 +9,7 @@ from courses.forms import StudentForm, MailListForm
 def index(request):
     courses = Course.objects.filter(active=True)
     form = MailListForm()
+    title = 'Cursos'
     if request.method == 'POST':
         form = MailListForm(request.POST)
         if form.is_valid():
@@ -23,11 +24,13 @@ def index(request):
             return render(request, 'courses/index.html', {
                 'courses': courses,
                 'suscribed': True,
-                'form': form
+                'form': form,
+                'title': title
             })
     return render(request, 'courses/index.html', {
         'courses': courses,
-        'form': form
+        'form': form,
+        'title': title
     })
 
 def show(request, id):
@@ -42,7 +45,8 @@ def show(request, id):
     course = Course.objects.get(id=id)
     return render(request, 'courses/show.html', {
         'course': course,
-        'form': student
+        'form': student,
+        'title': 'Curso: ' + course.title
     })
 
 def thanks(request):
