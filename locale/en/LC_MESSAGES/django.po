@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 08:51+0000\n"
+"POT-Creation-Date: 2016-10-21 09:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,61 +16,62 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: courses/templates/courses/index.html:6 home/templates/layout/footer.html:17
+#: courses/templates/courses/index.html:6 home/templates/layout/footer.html:14
 #: home/templates/layout/navbar.html:83
 msgid "Cursos"
-msgstr ""
+msgstr "Courses"
 
 #: courses/templates/courses/index.html:14
 msgid "En estos momentos no hay cursos disponibles"
-msgstr ""
+msgstr "There is no courses available at this time"
 
 #: courses/templates/courses/index.html:44
 #: courses/templates/courses/show.html:22
 msgid "Fecha de Inicio"
-msgstr ""
+msgstr "Start Date"
 
 #: courses/templates/courses/mail_list.html:5
 msgid "¡Gracias! te avisaré sobre los próximos cursos"
-msgstr ""
+msgstr "Thanks! I'll advise you about next courses"
 
 #: courses/templates/courses/mail_list.html:9
 msgid ""
 "Suscríbete a la lista de correos para recibir notificaciones de nuevos cursos"
-msgstr ""
+msgstr "Subscribe to the mailing list to receive notifications of new courses"
 
 #: courses/templates/courses/mail_list.html:15
 #: courses/templates/courses/show.html:52
 msgid "Suscribirme!"
-msgstr ""
+msgstr "Suscribe!"
 
 #: courses/templates/courses/show.html:23
 msgid "Dado por"
-msgstr ""
+msgstr "By"
 
 #: courses/templates/courses/show.html:24
 msgid "Lugar"
-msgstr ""
+msgstr "Location"
 
 #: courses/templates/courses/show.html:25
 msgid "Horario"
-msgstr ""
+msgstr "Schedule"
 
 #: courses/templates/courses/show.html:26
 msgid "Precio"
-msgstr ""
+msgstr "Price"
 
 #: courses/templates/courses/show.html:54
 msgid ""
 "Tus datos solo serán utilizados por mi para contactarnos y organizar el "
 "grupo, en ningún momento serán dado a terceros."
 msgstr ""
+"Your data will only be used by me to contact and organize the group at any "
+"time be given to third parties."
 
 #: courses/templates/courses/thanks.html:6
 msgid "Gracias"
-msgstr ""
+msgstr "Thanks"
 
 #: courses/templates/courses/thanks.html:13
 msgid ""
@@ -78,6 +79,8 @@ msgid ""
 "ir entrando en materia. Proximamente estaré contactando contigo para "
 "organizar el grupo y conectarnos mediante algún servicio de mensajería"
 msgstr ""
+"I will be contacting you shortly to organize the group and connect through "
+"any messaging application"
 
 #: env/lib/python3.5/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
@@ -1185,14 +1188,15 @@ msgid ""
 "Este sitio web utiliza cookies para asegurarse de obtener la mejor "
 "experiencia en nuestro sitio web"
 msgstr ""
+"This site uses cookies to ensure you get the best experience on our website"
 
 #: home/templates/base.html:32
 msgid "Más información"
-msgstr ""
+msgstr "More info"
 
 #: home/templates/base.html:32
 msgid "https://es.wikipedia.org/wiki/Cookie_(informática)"
-msgstr ""
+msgstr "https://en.wikipedia.org/wiki/HTTP_cookie"
 
 #: home/templates/home/index.html:9
 msgid "Full-Stack Developer and DevOps-Linux Cowboy"
@@ -1201,11 +1205,11 @@ msgstr ""
 #: home/templates/home/index.html:11 home/templates/layout/navbar.html:70
 #: home/templates/layout/navbar.html:77
 msgid "Saber más"
-msgstr ""
+msgstr "Know more"
 
 #: home/templates/home/index.html:19
 msgid "¿Piensas en tu negocio?"
-msgstr ""
+msgstr "Do you think about your business?"
 
 #: home/templates/home/index.html:22
 msgid ""
@@ -1213,33 +1217,36 @@ msgid ""
 "clientes. <br> Con tu página web profesional podrás abarcar incluso mercados "
 "que desconocías"
 msgstr ""
+"Internet is an expansion of your market and an increasing number of "
+"customers. <br> With your website you can cover even professional markets "
+"you didn't know about them"
 
 #: home/templates/home/index.html:44 home/templates/layout/navbar.html:71
 #: home/templates/layout/navbar.html:78
 msgid "Servicios"
-msgstr ""
+msgstr "Services"
 
 #: home/templates/home/index.html:49
 msgid "Páginas Web"
-msgstr ""
+msgstr "Websites"
 
 #: home/templates/home/index.html:50
 msgid "Desarrollo de sistemas web en general"
-msgstr ""
+msgstr "Web developmnet in general"
 
 #: home/templates/home/index.html:51 home/templates/home/index.html:57
 #: home/templates/home/index.html:63 home/templates/home/index.html:83
 #: home/templates/home/index.html:90 home/templates/home/index.html:156
 msgid "Ver más"
-msgstr ""
+msgstr "More"
 
 #: home/templates/home/index.html:56
 msgid "Aplicaciones Móviles"
-msgstr ""
+msgstr "Mobile apps"
 
 #: home/templates/home/index.html:57
 msgid "Desarrollo de aplicaciones móviles a medida"
-msgstr ""
+msgstr "Mobile application development"
 
 #: home/templates/home/index.html:62
 msgid "DevOps"
@@ -1247,11 +1254,11 @@ msgstr ""
 
 #: home/templates/home/index.html:63
 msgid "Administración, optimización de servidores"
-msgstr ""
+msgstr "Management and server optimization"
 
 #: home/templates/home/index.html:76
 msgid "Más Solicitados"
-msgstr ""
+msgstr "Hot"
 
 #: home/templates/home/index.html:81
 msgid "Ecommerce"
@@ -1259,7 +1266,7 @@ msgstr ""
 
 #: home/templates/home/index.html:82
 msgid "No esperes más y pide tu tienda en línea"
-msgstr ""
+msgstr "Go ahead and ask your online store"
 
 #: home/templates/home/index.html:88
 msgid "Landing Page"
@@ -1267,15 +1274,15 @@ msgstr ""
 
 #: home/templates/home/index.html:89
 msgid "Tu página de presentación y noticias."
-msgstr ""
+msgstr "Capture clientes with a high optimized landing page"
 
 #: home/templates/home/index.html:105
 msgid "Tu idea puede cobrar vida"
-msgstr ""
+msgstr "Your idea can come alive"
 
 #: home/templates/home/index.html:113
 msgid "Trabajos"
-msgstr ""
+msgstr "Works"
 
 #: home/templates/home/index.html:118
 msgid "Eyr preview img"
@@ -1283,15 +1290,15 @@ msgstr ""
 
 #: home/templates/home/index.html:122
 msgid "Envío y recepción"
-msgstr ""
+msgstr "Sending and receiving app"
 
 #: home/templates/home/index.html:128
 msgid "Muchos detalles"
-msgstr ""
+msgstr "Many details"
 
 #: home/templates/home/index.html:130
 msgid "Proyecto privado"
-msgstr ""
+msgstr "Private project"
 
 #: home/templates/home/index.html:142
 msgid "Inmoduran project img"
@@ -1303,50 +1310,48 @@ msgstr ""
 
 #: home/templates/home/index.html:150
 msgid "Inmobiliaria en alicante"
-msgstr ""
+msgstr "Real estate agency in Alicante"
 
 #: home/templates/home/index.html:154
 msgid "Super optimizada, SEO, Page Loading"
-msgstr ""
+msgstr "Highly optimized, SEO, Page Loading"
 
 #: home/templates/home/index.html:192
 msgid "Uno para todos y Todos para uno"
-msgstr ""
+msgstr "One for all and all for one"
 
 #: home/templates/home/index.html:196
 msgid ""
-"\n"
-"              Con el poder OpenSource y las comunidades de Software Libre se "
-"pueden utilizar tecnologías\n"
-"              <b>gratuitas</b>\n"
-"              altamente escalables, eficientes y ágiles para un buen "
-"producto de software.\n"
-"              "
+"Con el poder OpenSource y las comunidades de Software Libre se pueden "
+"utilizar tecnologías <b>gratuitas</b> altamente escalables, eficientes y "
+"ágiles para un buen producto de software."
 msgstr ""
+"With the OpenSource power and Free Software communities can use "
+"<b> free </b> technologies, highly scalable, efficient and agile for a good software "
+"product."
 
 #: home/templates/layout/footer.html:9
 msgid ""
-"\n"
-"          Para cualquiera de los servicios ponerse en contacto. <br>\n"
-"          Puede optar por una <b>prueba gratis</b> si así lo desea. <br>\n"
-"          "
+"Para cualquiera de los servicios ponerse en contacto. <br>Puede optar por "
+"una <b>prueba gratis</b> si así lo desea. <br>"
 msgstr ""
+"For any service contact. <br> can opt for a <b> Trial </b> if desired. <br>"
 
-#: home/templates/layout/footer.html:19
+#: home/templates/layout/footer.html:16
 msgid "Blog Personal"
 msgstr ""
 
 #: home/templates/layout/navbar.html:69 home/templates/layout/navbar.html:76
 msgid "Inicio"
-msgstr ""
+msgstr "Home"
 
 #: home/templates/layout/navbar.html:72 home/templates/layout/navbar.html:79
 msgid "Portfolio"
-msgstr ""
+msgstr "Portfolio"
 
 #: home/templates/layout/navbar.html:73 home/templates/layout/navbar.html:80
 msgid "Contacto"
-msgstr ""
+msgstr "Contact"
 
 #: home/templates/layout/navbar.html:82
 msgid "Blog"

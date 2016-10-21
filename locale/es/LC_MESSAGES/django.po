@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 08:51+0000\n"
+"POT-Creation-Date: 2016-10-21 09:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: courses/templates/courses/index.html:6 home/templates/layout/footer.html:17
+#: courses/templates/courses/index.html:6 home/templates/layout/footer.html:14
 #: home/templates/layout/navbar.html:83
 msgid "Cursos"
 msgstr ""
@@ -1315,24 +1315,18 @@ msgstr ""
 
 #: home/templates/home/index.html:196
 msgid ""
-"\n"
-"              Con el poder OpenSource y las comunidades de Software Libre se "
-"pueden utilizar tecnologías\n"
-"              <b>gratuitas</b>\n"
-"              altamente escalables, eficientes y ágiles para un buen "
-"producto de software.\n"
-"              "
+"Con el poder OpenSource y las comunidades de Software Libre se pueden "
+"utilizar tecnologías <b>gratuitas</b> altamente escalables, eficientes y "
+"ágiles para un buen producto de software."
 msgstr ""
 
 #: home/templates/layout/footer.html:9
 msgid ""
-"\n"
-"          Para cualquiera de los servicios ponerse en contacto. <br>\n"
-"          Puede optar por una <b>prueba gratis</b> si así lo desea. <br>\n"
-"          "
+"Para cualquiera de los servicios ponerse en contacto. <br>Puede optar por "
+"una <b>prueba gratis</b> si así lo desea. <br>"
 msgstr ""
 
-#: home/templates/layout/footer.html:19
+#: home/templates/layout/footer.html:16
 msgid "Blog Personal"
 msgstr ""
 
