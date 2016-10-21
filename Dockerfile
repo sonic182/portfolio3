@@ -17,6 +17,7 @@ RUN pip install -r requirements.txt
 ADD . /app/
 RUN chmod +x entrypoint.sh \
     && gulp build \
-    && python manage.py collectstatic --noinput
+    && python manage.py collectstatic --noinput \
+    && python manage.py compilemessages
 
 ENTRYPOINT ["/app/entrypoint.sh"]
