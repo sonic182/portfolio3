@@ -78,6 +78,9 @@ msgid ""
 "ir entrando en materia. Proximamente estaré contactando contigo para "
 "organizar el grupo y conectarnos mediante algún servicio de mensajería"
 msgstr ""
+"Proximamente estaré contactando contigo para "
+"organizar el grupo y conectarnos mediante algún servicio de mensajería"
+
 
 #: env/lib/python3.5/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
@@ -110,7 +113,7 @@ msgstr ""
 
 #: env/lib/python3.5/site-packages/django/core/validators.py:170
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "Ingrese un email válido"
 
 #: env/lib/python3.5/site-packages/django/core/validators.py:243
 msgid ""
@@ -464,7 +467,7 @@ msgstr ""
 
 #: env/lib/python3.5/site-packages/django/forms/fields.py:56
 msgid "This field is required."
-msgstr ""
+msgstr "Este campo es requerido"
 
 #: env/lib/python3.5/site-packages/django/forms/fields.py:250
 msgid "Enter a whole number."
@@ -1178,7 +1181,7 @@ msgstr ""
 
 #: home/templates/base.html:10
 msgid "meta description"
-msgstr ""
+msgstr "Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
 
 #: home/templates/base.html:32
 msgid ""
