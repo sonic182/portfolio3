@@ -4,7 +4,7 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
-RUN apt-get install -y nodejs \
+RUN apt-get install -y nodejs gettext \
     && npm install -g gulp \
     && rm -rf /var/lib/apt/lists/*
 
