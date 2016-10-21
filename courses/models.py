@@ -1,5 +1,5 @@
 from django.db import models
-# from ckeditor.fields import RichTextField
+from django.utils.translation import ugettext_lazy as _
 from ckeditor_uploader.fields import RichTextUploadingField
 
 from django.db.models.signals import post_delete
@@ -28,9 +28,9 @@ def mymodel_delete(sender, instance, **kwargs):
 class Student(models.Model):
     first_name = models.CharField(max_length=100, blank=True, null=True)
     last_name = models.CharField(max_length=100, blank=True, null=True)
-    name = models.CharField(max_length=140)
-    email = models.EmailField(max_length=100)
-    phone = models.CharField(max_length=100)
+    name = models.CharField(_('name'), max_length=140)
+    email = models.EmailField(_('email'), max_length=100)
+    phone = models.CharField(_('phone'), max_length=100)
     birthdate = models.DateField(blank=True, null=True)
     course = models.ForeignKey(Course)
     created_at = models.DateTimeField(auto_now_add=True)

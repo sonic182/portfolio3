@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 09:12+0000\n"
+"POT-Creation-Date: 2016-10-21 10:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: courses/models.py:31
+msgid "name"
+msgstr ""
+
+#: courses/models.py:32
+msgid "email"
+msgstr ""
+
+#: courses/models.py:33
+msgid "phone"
+msgstr ""
 
 #: courses/templates/courses/index.html:6 home/templates/layout/footer.html:14
 #: home/templates/layout/navbar.html:83
@@ -1181,7 +1193,8 @@ msgstr ""
 
 #: home/templates/base.html:10
 msgid "meta description"
-msgstr "Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
+msgstr ""
+"Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
 
 #: home/templates/base.html:32
 msgid ""
@@ -1326,8 +1339,8 @@ msgid ""
 "utilizar tecnologías <b>gratuitas</b> altamente escalables, eficientes y "
 "ágiles para un buen producto de software."
 msgstr ""
-"With the OpenSource power and Free Software communities can use "
-"<b> free </b> technologies, highly scalable, efficient and agile for a good software "
+"With the OpenSource power and Free Software communities can use <b> free </"
+"b> technologies, highly scalable, efficient and agile for a good software "
 "product."
 
 #: home/templates/layout/footer.html:9

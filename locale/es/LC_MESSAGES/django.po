@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 09:12+0000\n"
+"POT-Creation-Date: 2016-10-21 10:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: courses/models.py:31
+msgid "name"
+msgstr "nombre"
+
+#: courses/models.py:32
+msgid "email"
+msgstr "correo"
+
+#: courses/models.py:33
+msgid "phone"
+msgstr "teléfono"
 
 #: courses/templates/courses/index.html:6 home/templates/layout/footer.html:14
 #: home/templates/layout/navbar.html:83
@@ -78,9 +90,8 @@ msgid ""
 "ir entrando en materia. Proximamente estaré contactando contigo para "
 "organizar el grupo y conectarnos mediante algún servicio de mensajería"
 msgstr ""
-"Proximamente estaré contactando contigo para "
-"organizar el grupo y conectarnos mediante algún servicio de mensajería"
-
+"Proximamente estaré contactando contigo para organizar el grupo y "
+"conectarnos mediante algún servicio de mensajería"
 
 #: env/lib/python3.5/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
@@ -1181,7 +1192,8 @@ msgstr ""
 
 #: home/templates/base.html:10
 msgid "meta description"
-msgstr "Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
+msgstr ""
+"Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
 
 #: home/templates/base.html:32
 msgid ""
