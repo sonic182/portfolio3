@@ -19,3 +19,4 @@ media/
 log/
 .data/
 db/
+*.mo

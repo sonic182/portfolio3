@@ -1,16 +1,16 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <div class="my_container thanks">
   <div class="text-center">
-    <h1>Gracias <i class="fa fa-smile-o"></i></h1>
+    <h1>{% trans "Gracias" %} <i class="fa fa-smile-o"></i></h1>
     {# <h3>Aprender es lo que cuenta!</h3>#}
   </div>
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <p>
-          Puedes revisar en la descripción del curso los materiales recomendados para ir entrando en materia.
-          Proximamente estaré contactando contigo para organizar el grupo y conectarnos mediante algún servicio de mensajería
+          {% trans "Puedes revisar en la descripción del curso los materiales recomendados para ir entrando en materia. Proximamente estaré contactando contigo para organizar el grupo y conectarnos mediante algún servicio de mensajería" %}
         </p>
       </div>
     </div>

@@ -1,17 +1,18 @@
 {% load widget_tweaks %}
+{% load i18n %}
 {% if suscribed %}
 <div class="text-center">
-  <h4>¡Gracias! te avisaré sobre los próximos cursos</h4>
+  <h4>{% trans "¡Gracias! te avisaré sobre los próximos cursos" %}</h4>
 </div>
 {% else %}
 <form action="{% url 'courses_index' %}" class="text-center" method="post">
-  <h4>Suscríbete a la lista de correos para recibir notificaciones de nuevos cursos</h4>
+  <h4>{% trans "Suscríbete a la lista de correos para recibir notificaciones de nuevos cursos" %}</h4>
   {% csrf_token %}
   {# <input type="text" name="email" value="" class="form-control input_list_mail" placeholder="micorreo@hotmail.com">#}
   {{form.email.errors}}
   {{form.email|attr:'placeholder:micorreo@hotmail.com'|add_class:'input_list_mail'}}
   <div class="form-group">
-    <button type="submit" name="button" class="btn btn-primary btn-lg">Suscribirme!</button>
+    <button type="submit" name="button" class="btn btn-primary btn-lg">{% trans "Suscribirme!" %}</button>
   </div>
 </form>
 {% endif %}

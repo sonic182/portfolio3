@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 {# {% if request.path == '/' %}#}
 {% comment %}
@@ -63,21 +64,21 @@
       {% endcomment %}
       <ul class="nav navbar-nav navbar-right">
         {% if request.path == '/' %}
-        <li><a href="#navbar_default">Inicio</a></li>
-        <li><a href="#about">Saber más</a></li>
-        <li><a href="#services">Servicios</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#footer">Contacto</a></li>
+        <li><a href="#navbar_default">{% trans "Inicio" %}</a></li>
+        <li><a href="#about">{% trans "Saber más" %}</a></li>
+        <li><a href="#services">{% trans "Servicios" %}</a></li>
+        <li><a href="#portfolio">{% trans "Portfolio" %}</a></li>
+        <li><a href="#footer">{% trans "Contacto" %}</a></li>
         {% else %}
         {# <li class="sidebar-brand"><a href="/#navbar_default">Johanderson Mogollon</a></li>#}
-        <li><a href="{% url 'homepage' %}">Inicio</a></li>
-        <li><a href="/#about">Saber más</a></li>
-        <li><a href="/#services">Servicios</a></li>
-        <li><a href="/#portfolio">Portfolio</a></li>
-        <li><a href="/#footer">Contacto</a></li>
+        <li><a href="{% url 'homepage' %}">{% trans "Inicio" %}</a></li>
+        <li><a href="/#about">{% trans "Saber más" %}</a></li>
+        <li><a href="/#services">{% trans "Servicios" %}</a></li>
+        <li><a href="/#portfolio">{% trans "Portfolio" %}</a></li>
+        <li><a href="/#footer">{% trans "Contacto" %}</a></li>
         {% endif %}
-        <li><a href="http://blog.mogollon.com.ve">Blog</a></li>
-        <li class="nav_courses"><a href="{% url 'courses_index' %}">Cursos</a></li>
+        <li><a href="http://blog.mogollon.com.ve">{% trans "Blog" %}</a></li>
+        <li class="nav_courses"><a href="{% url 'courses_index' %}">{% trans "Cursos" %}</a></li>
         {% comment %}
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

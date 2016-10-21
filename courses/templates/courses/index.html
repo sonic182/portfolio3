@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
   <div class="my_container">
     <div class="text-center">
-      <h1> Cursos </h1>
+      <h1> {% trans "Cursos" %} </h1>
     </div>
 
     <div class="courses">
@@ -10,7 +11,7 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <div class="text-center">
-            <h3>En estos momentos no hay cursos disponibles</h3>
+            <h3>{% trans "En estos momentos no hay cursos disponibles" %}</h3>
             {% include "courses/mail_list.html" %}
           </div>
 
@@ -40,7 +41,7 @@
                     <div class="panel-body">
                       <h3>{{course.title}}</h3>
                       <span class="text-muted">
-                        Fecha de Inicio: <b>{{course.start_date|date}}</b>
+                        {% trans "Fecha de Inicio" %}: <b>{{course.start_date|date}}</b>
                       </span>
                     </div>
 

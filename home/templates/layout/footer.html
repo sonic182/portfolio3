@@ -1,21 +1,24 @@
 {% load static %}
+{% load i18n %}
 <!-- Footer-->
 <footer id="footer">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center"><img src="{% static "images/mogollon_full.svg" %}" height="100" alt="johanderson mogollon logo svg">
         <p>
+          {% blocktrans %}
           Para cualquiera de los servicios ponerse en contacto. <br>
           Puede optar por una <b>prueba gratis</b> si así lo desea. <br>
+          {% endblocktrans %}
         </p>
         <h4><strong>Johanderson Mogollon</strong></h4>
         <ul class="list-unstyled">
           {# <li><i class="fa fa-skype fa-lg"></i> sonic-1822 </a></li>#}
-          <li><i class="fa fa-graduation-cap fa-lg"></i><a href="{% url 'courses_index' %}"> Cursos </a></li>
+          <li><i class="fa fa-graduation-cap fa-lg"></i><a href="{% url 'courses_index' %}"> {% trans "Cursos" %} </a></li>
           <li><i class="fa fa-envelope-o fa-lg"></i><a href="mailto:johander1822@gmail.com"> johander1822@gmail.com</a></li>
-          <li><i class="fa fa-rss-square fa-lg"></i><a href="http://blog.mogollon.com.ve"> Blog Personal</a></li>
+          <li><i class="fa fa-rss-square fa-lg"></i><a href="http://blog.mogollon.com.ve"> {% trans "Blog Personal" %}</a></li>
           <li><i class="fa fa-phone fa-lg"></i><a href="telf:0034637284881"> 637 284 881</a></li>
-          <li><i class="fa fa-map-marker fa-lg"></i><a> Alicante</a></li>
+          <li><i class="fa fa-map-marker fa-lg"></i><a> Alicante </a></li>
           {# <li><i class="fa fa-github fa-lg"></i><a href="https://github.com/sonic182" target="_blank" > sonic182</a></li>#}
         </ul>
         <br>

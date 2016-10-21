@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 {% block content %}
 
 <header id="top" class="header">
   <div class="text-vertical-center">
     <h1>Johanderson Mogollon</h1>
-    <h3>Full-Stack Developer and DevOps-Linux Cowboy</h3><br><a href="#about" class="btn btn-dark btn-lg">Saber más</a>
+    <h3>{% trans "Full-Stack Developer and DevOps-Linux Cowboy" %}</h3>
+    <br>
+    <a href="#about" class="btn btn-dark btn-lg">{% trans "Saber más" %}</a>
   </div>
 </header>
 
@@ -13,13 +16,20 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2>¿Piensas en tu negocio?</h2>
-        <p class="lead">Internet es tu mejor amigo cuando se trata de mejorar las ventas de tu negocio, <br>          con tu página web podrás hacer que los clientes llegen a tí de una manera única.</p>
+        <h2>{% trans "¿Piensas en tu negocio?" %}</h2>
+        <p class="lead">
+          {# {% trans "Internet es tu mejor amigo cuando se trata de mejorar las ventas y llegar a más clientes para tu negocio, <br> con tu página web podrás hacer que los clientes llegen a tí de una manera única." %}#}
+          {% trans "Internet supone una expansión de tu mercado y un aumento del número de clientes. <br> Con tu página web profesional podrás abarcar incluso mercados que desconocías" %}
+        </p>
       </div>
+      {% comment %}
       <div class="col-lg-12 text-center">
-        <h2>¿Quieres un software que haga el trabajo por tí?</h2>
-        <p class="lead">La Tecnología está para ayudar a todos <br>          con el software ideal podrás ayudarte en tu día a día.</p>
+        <h2>{% trans "¿Quieres un software que haga el trabajo por tí?" %}</h2>
+        <p class="lead">
+          {% trans "La Tecnología está para ayudar a todos <br> con el software adecuado podrás ayudarte en tu día a día." %}
+        </p>
       </div>
+      {% endcomment %}
     </div>
   </div>
 </section>
@@ -30,47 +40,52 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-lg-10 col-lg-offset-1">
-        <h2>Servicios</h2>
+        <h2>{% trans "Servicios" %}</h2>
         <hr class="small">
         <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <div class="service-item"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-cloud fa-stack-1x text-primary"></i></span>
-              <h4><strong>DevOps</strong></h4>
-              <p>Administración, optimización de servidores en la nube.</p><a href="#footer" class="btn btn-light">Ver más</a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-4 col-sm-6">
             <div class="service-item"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-chrome fa-stack-1x text-primary"></i></span>
-              <h4><strong>Sistema Web</strong></h4>
-              <p>Desarrollo de sistemas web en general.</p><a href="#footer" class="btn btn-light">Ver más</a>
+              <h4><strong>{% trans "Páginas Web" %}</strong></h4>
+              <p>{% trans "Desarrollo de sistemas web en general" %}</p>
+              <a href="#footer" class="btn btn-light">{% trans "Ver más" %}</a>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-4 col-sm-6">
             <div class="service-item"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-apple fa-stack-1x text-primary"></i></span>
-              <h4><strong>Sistema Móvil</strong></h4>
-              <p>Desarrollo de aplicaciones móviles a medida.</p><a href="#footer" class="btn btn-light">Ver más</a>
+              <h4><strong>{% trans "Aplicaciones Móviles" %}</strong></h4>
+              <p>{% trans "Desarrollo de aplicaciones móviles a medida" %}</p><a href="#footer" class="btn btn-light">{% trans "Ver más" %}</a>
             </div>
           </div>
+          <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
+            <div class="service-item"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-cloud fa-stack-1x text-primary"></i></span>
+              <h4><strong>{% trans "DevOps" %}</strong></h4>
+              <p>{% trans "Administración, optimización de servidores" %}</p><a href="#footer" class="btn btn-light">{% trans "Ver más" %}</a>
+            </div>
+          </div>
+          {% comment %}
           <div class="col-md-3 col-sm-6">
             <div class="service-item"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-info fa-stack-1x text-primary"></i></span>
               <h4><strong>Consultor</strong></h4>
               <p>Colsultor de software, como debería ser tu sistema.</p><a href="#footer" class="btn btn-light">Ver más</a>
             </div>
           </div>
+          {% endcomment %}
         </div>
-        <h2>Más Solicitados</h2>
+        <h2>{% trans "Más Solicitados" %}</h2>
         <hr class="small">
         <div class="row">
           <div class="col-md-3 col-sm-6 col-md-offset-3">
             <div class="service-item"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-shopping-cart fa-stack-1x text-primary"></i></span>
-              <h4><strong>Ecommerce</strong></h4>
-              <p>No esperes más y pide tu tienda en línea.</p><a href="#footer" class="btn btn-hot">Ver más</a>
+              <h4><strong>{% trans "Ecommerce" %}</strong></h4>
+              <p>{% trans "No esperes más y pide tu tienda en línea" %}</p>
+              <a href="#footer" class="btn btn-hot">{% trans "Ver más" %}</a>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="service-item"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-rocket fa-stack-1x text-primary"></i></span>
-              <h4><strong>Landing Page</strong></h4>
-              <p>Tu página de presentación y noticias.</p><a href="#footer" class="btn btn-hot">Ver más</a>
+              <h4><strong>{% trans "Landing Page" %}</strong></h4>
+              <p>{% trans "Tu página de presentación y noticias." %}</p>
+              <a href="#footer" class="btn btn-hot">{% trans "Ver más" %}</a>
             </div>
           </div>
         </div>
@@ -85,7 +100,7 @@
 <!-- Callout-->
 <aside class="callout">
   <div class="text-vertical-center">
-    <h2 id="animate">Tu idea puede cobrar vida</h2>
+    <h2 id="animate">{% trans "Tu idea puede cobrar vida" %}</h2>
   </div>
 </aside>
 <!-- Portfolio-->
@@ -93,17 +108,26 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h2 id="trabajos">Trabajos</h2>
+        <h2 id="trabajos">{% trans "Trabajos" %}</h2>
         <hr class="small">
         <div class="row section">
           <div class="col-md-6">
-            <div class="portfolio-item"><a><img src="{% static "images/portfolio-2.jpg" %}" alt="Eyr preview" class="img-portfolio img-responsive gray-bordered" alt="Eyr project img"></a></div>
+            <div class="portfolio-item"><a>
+              <img src="{% static "images/portfolio-2.jpg" %}" alt="{% trans "Eyr preview img" %}" class="img-portfolio img-responsive gray-bordered" alt="Eyr project img"></a></div>
           </div>
           <div class="col-md-6">
             <div class="portfolio-item">
-              <h3>Envío y recepción</h3>
-              <p><a href="http://rubyonrails.org/" target="_blank">Rails</a><br><a href="https://angularjs.org/" target="_blank">Angular</a><br>                Muchos detalles... <br>                Proyecto privado<br><br>
-                <!-- <a href="http://eyr.mogollon.com.ve" target="_blank" class="btn btn-lg btn-dark">Ver más</a>-->
+              <h3>{% trans "Envío y recepción" %}</h3>
+              <p>
+                <a href="http://rubyonrails.org/" target="_blank">Rails</a>
+                <br>
+                <a href="https://angularjs.org/" target="_blank">Angular</a>
+                <br>
+                {% trans "Muchos detalles" %}
+                <br>
+                {% trans "Proyecto privado" %}
+                <br><br>
+                {# <!-- <a href="http://eyr.mogollon.com.ve" target="_blank" class="btn btn-lg btn-dark">Ver más</a>-->#}
               </p>
             </div>
           </div>
@@ -111,13 +135,23 @@
         <hr>
         <div class="row section">
           <div class="col-md-6 pull-right">
-            <div class="portfolio-item"><a><img src="{% static "images/portfolio-5.jpg" %}" alt="Inmoduran" class="img-portfolio img-responsive gray-bordered" alt="Inmoduran project img"></a></div>
+            <div class="portfolio-item">
+              <a>
+                <img src="{% static "images/portfolio-5.jpg" %}" class="img-portfolio img-responsive gray-bordered" alt="{% trans "Inmoduran project img" %}">
+              </a>
+            </div>
           </div>
           <div class="col-md-6">
             <div class="portfolio-item">
-              <h3>Inmoduran</h3>
-              <p>Inmobiliaria en alicante <br>                Creada desde mi sistema base inmobiliario <br>                Super optimizada, SEO, Page Loading <br><br>
-                <a href="http://www.inmoduran.net/" target="_blank" class="btn btn-lg btn-dark">Ver más</a>
+              <h3>{% trans "Inmoduran" %}</h3>
+              <p>
+                {% trans "Inmobiliaria en alicante" %}
+                {# <br> #}
+                {# {% trans "Creada desde mi sistema base inmobiliario" %}#}
+                <br>
+                {% trans "Super optimizada, SEO, Page Loading" %}
+                <br><br>
+                <a href="http://www.inmoduran.net/" target="_blank" class="btn btn-lg btn-dark">{% trans "Ver más" %}</a>
               </p>
             </div>
           </div>
@@ -152,10 +186,16 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3>Uno para todos y Todos para uno</h3>
+        <h3>{% trans "Uno para todos y Todos para uno" %}</h3>
         <div class="row">
           <div class="col-md-6 col-sm-8 col-sm-offset-2 col-md-offset-3">
-            <p>Con el poder OpenSource y las comunidades de Software Libre se pueden utilizar tecnologías <b>gratuitas</b> altamente escalables, veloces y ágiles para un buen producto de software.</p>
+            <p>
+              {% blocktrans %}
+              Con el poder OpenSource y las comunidades de Software Libre se pueden utilizar tecnologías
+              <b>gratuitas</b>
+              altamente escalables, eficientes y ágiles para un buen producto de software.
+              {% endblocktrans %}
+            </p>
           </div>
         </div>
         <!--

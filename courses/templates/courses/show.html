@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load widget_tweaks %}
+{% load i18n %}
 {% block content %}
 <div class="my_container courses_show">
   <div class="text-center">
@@ -18,11 +19,11 @@
           {% csrf_token %}
           <div class="panel-body">
             <ul class="list-unstyled">
-              <li>Fecha de Inicio: <b>{{course.start_date|date}}</b></li>
-              <li>Dado por: <b>{{course.author}}</b></li>
-              <li>Lugar: <b>{{course.place}}</b></li>
-              <li>Horario: <b>{{course.schedule}}</b></li>
-              <li>Precio: <b>{{course.price}}</b></li>
+              <li>{% trans "Fecha de Inicio" %}: <b>{{course.start_date|date}}</b></li>
+              <li>{% trans "Dado por" %}: <b>{{course.author}}</b></li>
+              <li>{% trans "Lugar" %}: <b>{{course.place}}</b></li>
+              <li>{% trans "Horario" %}: <b>{{course.schedule}}</b></li>
+              <li>{% trans "Precio" %}: <b>{{course.price}}</b></li>
               {# <li class="text-primary">Inscritos: <b>{{course.student_set.count}}</b></li>#}
             </ul>
             {# <small class="text-muted">Inscribete pronto para organizar los horarios</small>#}
@@ -48,9 +49,9 @@
               {{form.phone.label_tag}}
               {{form.phone|attr:'placeholder:Ej: 637 284 881'}}
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Suscribirme!</button>
+            <button type="submit" class="btn btn-primary btn-block">{% trans "Suscribirme!" %}</button>
             <div class="form-group">
-              <small class="text-muted">Tus datos solo serán utilizados por mi para contactarnos y organizar el grupo, en ningún momento serán dado a terceros.</small>
+              <small class="text-muted">{% trans "Tus datos solo serán utilizados por mi para contactarnos y organizar el grupo, en ningún momento serán dado a terceros." %}</small>
             </div>
           </div>
         </form>
