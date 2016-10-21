@@ -7,6 +7,7 @@ from courses.models import Course
 class CoursesSitemap(sitemaps.Sitemap):
     changefreq = "daily"
     priority = 0.5
+    i18n = True
 
     def items(self):
         return Course.objects.filter(active=True)
@@ -20,6 +21,7 @@ class CoursesSitemap(sitemaps.Sitemap):
 class CoursesStaticSitemap(sitemaps.Sitemap):
     priority = 0.5
     changefreq = 'daily'
+    i18n = True
 
     def items(self):
         return ['courses_index']

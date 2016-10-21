@@ -18,6 +18,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
+from django.conf.urls.i18n import i18n_patterns
 
 from home import views as home_views
 from home.sitemap import HomeSitemap
@@ -30,13 +31,16 @@ sitemaps = {
 }
 
 urlpatterns = [
-    url(r'^$', home_views.home, name='homepage'),
-    url(r'^admin/', admin.site.urls),
-    url(r'^courses/', include('courses.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^admin/', admin.site.urls),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
+
+urlpatterns += i18n_patterns(
+    url(r'^$', home_views.home, name='homepage'),
+    url(r'^courses/', include('courses.urls')),
+)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
