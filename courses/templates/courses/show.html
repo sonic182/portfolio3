@@ -19,7 +19,7 @@
           {% csrf_token %}
           <div class="panel-body">
             <ul class="list-unstyled">
-              <li>{% trans "Fecha de Inicio" %}: <b>{{course.start_date|date}}</b></li>
+              <li>{% trans "Fecha de Inicio" %}: <b><time datetime="{{course.start_date|date:'c'}}">{{course.start_date|date}}</time></b></li>
               <li>{% trans "Dado por" %}: <b>{{course.author}}</b></li>
               <li>{% trans "Lugar" %}: <b>{{course.place}}</b></li>
               <li>{% trans "Horario" %}: <b>{{course.schedule}}</b></li>
