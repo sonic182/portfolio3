@@ -16,6 +16,7 @@ class Course(models.Model):
     schedule = models.CharField(max_length=100, default='')
     start_date = models.DateTimeField(blank=True, null=True)
     active = models.BooleanField(default=False)
+    views = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     def __str__(self):

@@ -33,6 +33,8 @@ def show(request, id):
             student_obj.save()
             return redirect('courses_thanks')
     course = Course.objects.get(id=id)
+    course.views += 1
+    course.save()
     return render(request, 'courses/show.html', {
         'course': course,
         'form': student,

@@ -3,7 +3,7 @@ from . import models
 
 @admin.register(models.Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('title', 'active', 'start_date', 'created_at', 'updated_at')
+    list_display = ('title', 'active', 'start_date', 'views', 'created_at', 'updated_at')
     list_filter = ('title', 'active', 'start_date', 'created_at', 'updated_at')
     actions = ['active', 'deactive']
 
