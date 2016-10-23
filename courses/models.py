@@ -7,8 +7,9 @@ from django.dispatch import receiver
 
 class Course(models.Model):
     picture = models.ImageField(upload_to='courses_pics')
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=60)
     description = RichTextUploadingField()
+    meta_description = models.CharField(max_length=160, default='')
     author = models.CharField(max_length=100, default='Johanderson')
     price = models.CharField(max_length=100, default='')
     place = models.CharField(max_length=100, default='')

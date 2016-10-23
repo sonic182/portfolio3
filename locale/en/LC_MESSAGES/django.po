@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 10:16+0000\n"
+"POT-Creation-Date: 2016-10-23 10:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: courses/models.py:31
+#: courses/models.py:32
 msgid "name"
 msgstr ""
 
-#: courses/models.py:32
+#: courses/models.py:33
 msgid "email"
 msgstr ""
 
-#: courses/models.py:33
+#: courses/models.py:34
 msgid "phone"
 msgstr ""
 
-#: courses/templates/courses/index.html:6 home/templates/layout/footer.html:14
-#: home/templates/layout/navbar.html:83
+#: courses/templates/courses/index.html:6 courses/views.py:15
+#: home/templates/layout/footer.html:14 home/templates/layout/navbar.html:83
 msgid "Cursos"
 msgstr "Courses"
 
@@ -93,6 +93,17 @@ msgid ""
 msgstr ""
 "I will be contacting you shortly to organize the group and connect through "
 "any messaging application"
+
+#: courses/views.py:16
+#, fuzzy
+#| msgid "meta description"
+msgid "meta_description_courses"
+msgstr ""
+"Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
+
+#: courses/views.py:39 courses/views.py:40
+msgid "Course"
+msgstr ""
 
 #: env/lib/python3.5/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
@@ -1191,11 +1202,6 @@ msgstr ""
 msgid "Index of %(directory)s"
 msgstr ""
 
-#: home/templates/base.html:10
-msgid "meta description"
-msgstr ""
-"Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
-
 #: home/templates/base.html:32
 msgid ""
 "Este sitio web utiliza cookies para asegurarse de obtener la mejor "
@@ -1369,6 +1375,11 @@ msgstr "Contact"
 #: home/templates/layout/navbar.html:82
 msgid "Blog"
 msgstr ""
+
+#: home/templatetags/seo_extras.py:17
+msgid "meta description"
+msgstr ""
+"Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
 
 #: portfolio3/settings.py:152
 msgid "Spanish"
