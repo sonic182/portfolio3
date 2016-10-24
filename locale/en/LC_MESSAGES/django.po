@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-23 10:27+0000\n"
+"POT-Creation-Date: 2016-10-24 20:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: courses/models.py:32
+#: courses/models.py:33
 msgid "name"
 msgstr ""
 
-#: courses/models.py:33
+#: courses/models.py:34
 msgid "email"
 msgstr ""
 
-#: courses/models.py:34
+#: courses/models.py:35
 msgid "phone"
 msgstr ""
 
@@ -38,7 +38,7 @@ msgstr "Courses"
 msgid "En estos momentos no hay cursos disponibles"
 msgstr "There is no courses available at this time"
 
-#: courses/templates/courses/index.html:44
+#: courses/templates/courses/index.html:47
 #: courses/templates/courses/show.html:22
 msgid "Fecha de Inicio"
 msgstr "Start Date"
@@ -101,7 +101,7 @@ msgid "meta_description_courses"
 msgstr ""
 "Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
 
-#: courses/views.py:39 courses/views.py:40
+#: courses/views.py:41 courses/views.py:42
 msgid "Course"
 msgstr ""
 
@@ -1255,7 +1255,8 @@ msgstr "Web developmnet in general"
 
 #: home/templates/home/index.html:51 home/templates/home/index.html:57
 #: home/templates/home/index.html:63 home/templates/home/index.html:83
-#: home/templates/home/index.html:90 home/templates/home/index.html:156
+#: home/templates/home/index.html:90 home/templates/home/portfolio.html:55
+#: home/templates/home/portfolio.html:78
 msgid "Ver más"
 msgstr "More"
 
@@ -1299,47 +1300,11 @@ msgstr "Capture clientes with a high optimized landing page"
 msgid "Tu idea puede cobrar vida"
 msgstr "Your idea can come alive"
 
-#: home/templates/home/index.html:113
-msgid "Trabajos"
-msgstr "Works"
-
-#: home/templates/home/index.html:118
-msgid "Eyr preview img"
-msgstr ""
-
-#: home/templates/home/index.html:122
-msgid "Envío y recepción"
-msgstr "Sending and receiving app"
-
-#: home/templates/home/index.html:128
-msgid "Muchos detalles"
-msgstr "Many details"
-
-#: home/templates/home/index.html:130
-msgid "Proyecto privado"
-msgstr "Private project"
-
-#: home/templates/home/index.html:142
-msgid "Inmoduran project img"
-msgstr ""
-
-#: home/templates/home/index.html:148
-msgid "Inmoduran"
-msgstr ""
-
-#: home/templates/home/index.html:150
-msgid "Inmobiliaria en alicante"
-msgstr "Real estate agency in Alicante"
-
-#: home/templates/home/index.html:154
-msgid "Super optimizada, SEO, Page Loading"
-msgstr "Highly optimized, SEO, Page Loading"
-
-#: home/templates/home/index.html:192
+#: home/templates/home/index.html:115
 msgid "Uno para todos y Todos para uno"
 msgstr "One for all and all for one"
 
-#: home/templates/home/index.html:196
+#: home/templates/home/index.html:119
 msgid ""
 "Con el poder OpenSource y las comunidades de Software Libre se pueden "
 "utilizar tecnologías <b>gratuitas</b> altamente escalables, eficientes y "
@@ -1348,6 +1313,63 @@ msgstr ""
 "With the OpenSource power and Free Software communities can use <b> free </"
 "b> technologies, highly scalable, efficient and agile for a good software "
 "product."
+
+#: home/templates/home/portfolio.html:10
+msgid "Trabajos"
+msgstr "Works"
+
+#: home/templates/home/portfolio.html:15
+msgid "Eyr preview img"
+msgstr ""
+
+#: home/templates/home/portfolio.html:19
+msgid "Envío y recepción"
+msgstr "Sending and receiving app"
+
+#: home/templates/home/portfolio.html:21
+msgid "EYR description"
+msgstr "Internal service of sending and receiving documents"
+
+#: home/templates/home/portfolio.html:27
+msgid "Muchos detalles"
+msgstr "Many details"
+
+#: home/templates/home/portfolio.html:29
+msgid "Proyecto privado"
+msgstr "Private project"
+
+#: home/templates/home/portfolio.html:41
+msgid "Inmoduran project img"
+msgstr ""
+
+#: home/templates/home/portfolio.html:47
+msgid "Inmoduran"
+msgstr ""
+
+#: home/templates/home/portfolio.html:49
+msgid "Inmobiliaria en alicante"
+msgstr "Real estate agency in Alicante"
+
+#: home/templates/home/portfolio.html:53
+msgid "Super optimizada, SEO, Page Loading"
+msgstr "Highly optimized, SEO, Page Loading"
+
+#: home/templates/home/portfolio.html:64
+msgid "Ecosbox project img"
+msgstr ""
+
+#: home/templates/home/portfolio.html:70
+msgid "Ecosbox"
+msgstr ""
+
+#: home/templates/home/portfolio.html:72
+msgid "Ecosbox subtitle"
+msgstr "Package Delivery Service"
+
+#: home/templates/home/portfolio.html:76
+msgid "Ecosbox description"
+msgstr ""
+"In ecosbox my tasks are <br> Add new features to the application <br> SEO"
 
 #: home/templates/layout/footer.html:9
 msgid ""
@@ -1380,6 +1402,14 @@ msgstr ""
 msgid "meta description"
 msgstr ""
 "Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
+
+#: home/views.py:10
+msgid "portfolio_meta_title"
+msgstr "Johanderson | Portfolio"
+
+#: home/views.py:11
+msgid "portfolio_meta_description"
+msgstr "Some of my freelancer works."
 
 #: portfolio3/settings.py:152
 msgid "Spanish"

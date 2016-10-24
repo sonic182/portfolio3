@@ -67,14 +67,14 @@
         <li><a href="#navbar_default">{% trans "Inicio" %}</a></li>
         <li><a href="#about">{% trans "Saber más" %}</a></li>
         <li><a href="#services">{% trans "Servicios" %}</a></li>
-        <li><a href="#portfolio">{% trans "Portfolio" %}</a></li>
+        <li><a href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a></li>
         <li><a href="#footer">{% trans "Contacto" %}</a></li>
         {% else %}
         {# <li class="sidebar-brand"><a href="/#navbar_default">Johanderson Mogollon</a></li>#}
         <li><a href="{% url 'homepage' %}">{% trans "Inicio" %}</a></li>
         <li><a href="/#about">{% trans "Saber más" %}</a></li>
         <li><a href="/#services">{% trans "Servicios" %}</a></li>
-        <li><a href="/#portfolio">{% trans "Portfolio" %}</a></li>
+        <li><a href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a></li>
         <li><a href="/#footer">{% trans "Contacto" %}</a></li>
         {% endif %}
         <li><a href="http://blog.mogollon.com.ve">{% trans "Blog" %}</a></li>

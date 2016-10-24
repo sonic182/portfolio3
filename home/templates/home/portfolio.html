@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 text-center">
+        <h1 id="trabajos">{% trans "Trabajos" %}</h1>
+        <hr class="small">
+        <article class="row section">
+          <div class="col-md-6">
+            <div class="portfolio-item"><a>
+              <img src="{% static "images/portfolio-2.jpg" %}" alt="{% trans "Eyr preview img" %}" class="img-portfolio img-responsive gray-bordered" alt="Eyr project img"></a></div>
+          </div>
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <h3>{% trans "Envío y recepción" %}</h3>
+              <p>
+                {% trans "EYR description" %}
+                <hr>
+                <a href="http://rubyonrails.org/" target="_blank">Rails</a>
+                <br>
+                <a href="https://angularjs.org/" target="_blank">Angular</a>
+                <br>
+                {% trans "Muchos detalles" %}
+                <br>
+                {% trans "Proyecto privado" %}
+                <br><br>
+                {# <!-- <a href="http://eyr.mogollon.com.ve" target="_blank" class="btn btn-lg btn-dark">Ver más</a>-->#}
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="row section">
+          <div class="col-md-6 pull-right">
+            <div class="portfolio-item">
+              <a>
+                <img src="{% static "images/portfolio-5.jpg" %}" class="img-portfolio img-responsive gray-bordered" alt="{% trans "Inmoduran project img" %}">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <h3>{% trans "Inmoduran" %}</h3>
+              <p>
+                {% trans "Inmobiliaria en alicante" %}
+                {# <br> #}
+                {# {% trans "Creada desde mi sistema base inmobiliario" %}#}
+                <hr>
+                {% trans "Super optimizada, SEO, Page Loading" %}
+                <br><br>
+                <a href="http://www.inmoduran.net/" target="_blank" class="btn btn-lg btn-dark">{% trans "Ver más" %}</a>
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="row section">
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <a>
+                <img src="{% static "images/portfolio-6_low.jpg" %}" class="img-portfolio img-responsive gray-bordered" alt="{% trans "Ecosbox project img" %}">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <h3>{% trans "Ecosbox" %}</h3>
+              <p>
+                {% trans "Ecosbox subtitle" %}
+                {# <br> #}
+                {# {% trans "Creada desde mi sistema base inmobiliario" %}#}
+                <hr>
+                {% trans "Ecosbox description" %}
+                <br><br>
+                <a href="https://www.ecosbox.com" target="_blank" class="btn btn-lg btn-dark">{% trans "Ver más" %}</a>
+              </p>
+            </div>
+          </div>
+        </article>
+        {% comment %}
+        <div class="row section">
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <img src="https://raw.githubusercontent.com/sonic182/phoenixChat/master/extras/screen.jpg" alt="Inmoduran" class="img-portfolio img-responsive gray-bordered">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="portfolio-item">
+              <h3>Simple Chat</h3>
+              <p>Un simple chat <br>                HTML5 Websockets, <a target="_blank" href="http://elixir-lang.org">elixir language</a><br><a target="_blank" href="http://www.phoenixframework.org">Phoenix Framework</a><br><br>
+                <a href="https://github.com/sonic182/phoenixChat" target="_blank" class="btn"><i class="fa fa-github fa-lg"></i> Repo</a><br><a href="https://warm-meadow-51920.herokuapp.com" target="_blank" class="btn btn-lg btn-dark">Ver más</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endcomment %}
+      </div>
+      <!-- /.col-lg-10-->
+    </div>
+    <!-- /.row-->
+  </div>
+  <!-- /.container-->
+</section>
+
+{% endblock %}

@@ -38,7 +38,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^$', home_views.home, name='homepage'),
+    url(r'^', include('home.urls')),
     url(r'^courses/', include('courses.urls')),
 )
 

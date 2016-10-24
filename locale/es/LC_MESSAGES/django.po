@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-23 10:27+0000\n"
+"POT-Creation-Date: 2016-10-24 20:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: courses/models.py:32
+#: courses/models.py:33
 msgid "name"
 msgstr "nombre"
 
-#: courses/models.py:33
+#: courses/models.py:34
 msgid "email"
 msgstr "correo"
 
-#: courses/models.py:34
+#: courses/models.py:35
 msgid "phone"
 msgstr "teléfono"
 
@@ -39,7 +39,7 @@ msgstr ""
 msgid "En estos momentos no hay cursos disponibles"
 msgstr ""
 
-#: courses/templates/courses/index.html:44
+#: courses/templates/courses/index.html:47
 #: courses/templates/courses/show.html:22
 msgid "Fecha de Inicio"
 msgstr ""
@@ -101,7 +101,7 @@ msgstr ""
 "Desarrollador Full Stack, freelancer, linux, ruby, python and nodejs "
 "developer"
 
-#: courses/views.py:39 courses/views.py:40
+#: courses/views.py:41 courses/views.py:42
 msgid "Course"
 msgstr "Curso"
 
@@ -1251,7 +1251,8 @@ msgstr ""
 
 #: home/templates/home/index.html:51 home/templates/home/index.html:57
 #: home/templates/home/index.html:63 home/templates/home/index.html:83
-#: home/templates/home/index.html:90 home/templates/home/index.html:156
+#: home/templates/home/index.html:90 home/templates/home/portfolio.html:55
+#: home/templates/home/portfolio.html:78
 msgid "Ver más"
 msgstr ""
 
@@ -1295,52 +1296,74 @@ msgstr ""
 msgid "Tu idea puede cobrar vida"
 msgstr ""
 
-#: home/templates/home/index.html:113
-msgid "Trabajos"
-msgstr ""
-
-#: home/templates/home/index.html:118
-msgid "Eyr preview img"
-msgstr ""
-
-#: home/templates/home/index.html:122
-msgid "Envío y recepción"
-msgstr ""
-
-#: home/templates/home/index.html:128
-msgid "Muchos detalles"
-msgstr ""
-
-#: home/templates/home/index.html:130
-msgid "Proyecto privado"
-msgstr ""
-
-#: home/templates/home/index.html:142
-msgid "Inmoduran project img"
-msgstr ""
-
-#: home/templates/home/index.html:148
-msgid "Inmoduran"
-msgstr ""
-
-#: home/templates/home/index.html:150
-msgid "Inmobiliaria en alicante"
-msgstr ""
-
-#: home/templates/home/index.html:154
-msgid "Super optimizada, SEO, Page Loading"
-msgstr ""
-
-#: home/templates/home/index.html:192
+#: home/templates/home/index.html:115
 msgid "Uno para todos y Todos para uno"
 msgstr ""
 
-#: home/templates/home/index.html:196
+#: home/templates/home/index.html:119
 msgid ""
 "Con el poder OpenSource y las comunidades de Software Libre se pueden "
 "utilizar tecnologías <b>gratuitas</b> altamente escalables, eficientes y "
 "ágiles para un buen producto de software."
 msgstr ""
+
+#: home/templates/home/portfolio.html:10
+msgid "Trabajos"
+msgstr ""
+
+#: home/templates/home/portfolio.html:15
+msgid "Eyr preview img"
+msgstr ""
+
+#: home/templates/home/portfolio.html:19
+msgid "Envío y recepción"
+msgstr ""
+
+#: home/templates/home/portfolio.html:21
+msgid "EYR description"
+msgstr "Servicio interno de envío y recepción de documentos"
+
+#: home/templates/home/portfolio.html:27
+msgid "Muchos detalles"
+msgstr ""
+
+#: home/templates/home/portfolio.html:29
+msgid "Proyecto privado"
+msgstr ""
+
+#: home/templates/home/portfolio.html:41
+msgid "Inmoduran project img"
+msgstr ""
+
+#: home/templates/home/portfolio.html:47
+msgid "Inmoduran"
+msgstr ""
+
+#: home/templates/home/portfolio.html:49
+msgid "Inmobiliaria en alicante"
+msgstr ""
+
+#: home/templates/home/portfolio.html:53
+msgid "Super optimizada, SEO, Page Loading"
+msgstr ""
+
+#: home/templates/home/portfolio.html:64
+msgid "Ecosbox project img"
+msgstr ""
+
+#: home/templates/home/portfolio.html:70
+msgid "Ecosbox"
+msgstr ""
+
+#: home/templates/home/portfolio.html:72
+msgid "Ecosbox subtitle"
+msgstr "Servicio de Envío de Paquetes"
+
+#: home/templates/home/portfolio.html:76
+msgid "Ecosbox description"
+msgstr ""
+"En ecosbox mis tareas son <br> Añadir nuevas características a la aplicación "
+"<br> SEO"
 
 #: home/templates/layout/footer.html:9
 msgid ""
@@ -1358,7 +1381,7 @@ msgstr ""
 
 #: home/templates/layout/navbar.html:72 home/templates/layout/navbar.html:79
 msgid "Portfolio"
-msgstr ""
+msgstr "Portafolio"
 
 #: home/templates/layout/navbar.html:73 home/templates/layout/navbar.html:80
 msgid "Contacto"
@@ -1373,6 +1396,14 @@ msgid "meta description"
 msgstr ""
 "Desarrollador Full Stack, freelancer, linux, ruby, python and nodejs "
 "developer"
+
+#: home/views.py:10
+msgid "portfolio_meta_title"
+msgstr "Johanderson | Portafolio"
+
+#: home/views.py:11
+msgid "portfolio_meta_description"
+msgstr "Algunos de mis trabajos freelance."
 
 #: portfolio3/settings.py:152
 msgid "Spanish"
