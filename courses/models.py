@@ -1,9 +1,10 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from ckeditor_uploader.fields import RichTextUploadingField
-
-from django.db.models.signals import post_delete
+from django.contrib.sitemaps import ping_google
+from django.db.models.signals import post_delete, post_save
 from django.dispatch import receiver
+
+from ckeditor_uploader.fields import RichTextUploadingField
 
 class Course(models.Model):
     picture = models.ImageField(upload_to='courses_pics')
@@ -23,9 +24,16 @@ class Course(models.Model):
         return self.title
 
 @receiver(post_delete, sender=Course)
-def mymodel_delete(sender, instance, **kwargs):
+def delete_picture_course(sender, instance, **kwargs):
     # Pass false so FileField doesn't save the model.
     instance.picture.delete(False)
+
+@receiver(post_save, sender=Course)
+def ping_google(sender, instance, **kwargs):
+    try:
+        ping_google()
+    except Exception:
+        pass
 
 class Student(models.Model):
     first_name = models.CharField(max_length=100, blank=True, null=True)
