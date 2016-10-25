@@ -36,6 +36,13 @@ elif env== 'test':
     SECRET_KEY = '+v%(ju0tm#(qg8g0a+kcjkn#6$9tt8qbue3^ces^w$qqikhj=l'
     DEBUG = True
 else: # development
+    # mailcatcher
+    EMAIL_HOST = '127.0.0.1'
+    EMAIL_HOST_USER = ''
+    EMAIL_HOST_PASSWORD = ''
+    EMAIL_PORT = 1025
+    EMAIL_USE_TLS = False
+
     SECRET_KEY = '+v%(ju0tm#(qg8g0a+kcjkn#6$9tt8qbue3^ces^w$qqikhj=l'
     DEBUG = True
 

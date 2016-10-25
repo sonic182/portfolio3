@@ -31,6 +31,8 @@ def show(request, id):
             student_obj = student.save(commit=False)
             student_obj.course = Course.objects.get(id=id)
             student_obj.save()
+            msg = 'Nuevo estudiante: <br>{name} <br>{email} <br>{phone}'.format(name=student_obj.name, email=student_obj.email, phone=student_obj.phone, )
+            send_mail('Nuevo Student Mogollon Cursos', msg, 'johanderson@mogollon.com.ve', ['johander1822@gmail.com'], fail_silently=False)
             return redirect('courses_thanks')
     course = Course.objects.get(id=id)
     course.views += 1
