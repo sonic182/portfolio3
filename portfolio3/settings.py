@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'django.contrib.sites',
     'home',
     'courses',
     'ckeditor',
@@ -194,3 +195,6 @@ STATICFILES_FINDERS = (
 PIPELINE = {
     'ENABLED': True
 }
+
+# DJANGO SITES
+SITE_ID=1
