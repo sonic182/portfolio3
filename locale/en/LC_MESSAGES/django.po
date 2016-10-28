@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-24 20:50+0000\n"
+"POT-Creation-Date: 2016-10-28 20:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: courses/models.py:33
+#: courses/models.py:41
 msgid "name"
 msgstr ""
 
-#: courses/models.py:34
+#: courses/models.py:42
 msgid "email"
 msgstr ""
 
-#: courses/models.py:35
+#: courses/models.py:43
 msgid "phone"
 msgstr ""
 
 #: courses/templates/courses/index.html:6 courses/views.py:15
-#: home/templates/layout/footer.html:14 home/templates/layout/navbar.html:83
+#: home/templates/layout/footer.html:15 home/templates/layout/navbar.html:83
 msgid "Cursos"
 msgstr "Courses"
 
@@ -101,7 +101,7 @@ msgid "meta_description_courses"
 msgstr ""
 "Full-Stack developer, freelancer, linux, ruby, python and nodejs developer"
 
-#: courses/views.py:41 courses/views.py:42
+#: courses/views.py:43 courses/views.py:44
 msgid "Course"
 msgstr ""
 
@@ -1202,18 +1202,18 @@ msgstr ""
 msgid "Index of %(directory)s"
 msgstr ""
 
-#: home/templates/base.html:32
+#: home/templates/base.html:33
 msgid ""
 "Este sitio web utiliza cookies para asegurarse de obtener la mejor "
 "experiencia en nuestro sitio web"
 msgstr ""
 "This site uses cookies to ensure you get the best experience on our website"
 
-#: home/templates/base.html:32
+#: home/templates/base.html:33
 msgid "Más información"
 msgstr "More info"
 
-#: home/templates/base.html:32
+#: home/templates/base.html:33
 msgid "https://es.wikipedia.org/wiki/Cookie_(informática)"
 msgstr "https://en.wikipedia.org/wiki/HTTP_cookie"
 
@@ -1378,17 +1378,18 @@ msgid ""
 msgstr ""
 "For any service contact. <br> can opt for a <b> Trial </b> if desired. <br>"
 
-#: home/templates/layout/footer.html:16
+#: home/templates/layout/footer.html:14 home/templates/layout/navbar.html:72
+#: home/templates/layout/navbar.html:79
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: home/templates/layout/footer.html:17
 msgid "Blog Personal"
 msgstr ""
 
 #: home/templates/layout/navbar.html:69 home/templates/layout/navbar.html:76
 msgid "Inicio"
 msgstr "Home"
-
-#: home/templates/layout/navbar.html:72 home/templates/layout/navbar.html:79
-msgid "Portfolio"
-msgstr "Portfolio"
 
 #: home/templates/layout/navbar.html:73 home/templates/layout/navbar.html:80
 msgid "Contacto"
@@ -1411,10 +1412,18 @@ msgstr "Johanderson | Portfolio"
 msgid "portfolio_meta_description"
 msgstr "Some of my freelancer works."
 
-#: portfolio3/settings.py:152
+#: portfolio3/settings.py:160
 msgid "Spanish"
 msgstr ""
 
-#: portfolio3/settings.py:153
+#: portfolio3/settings.py:161
 msgid "English"
 msgstr ""
+
+#: templates/404.html:7
+msgid "Ops, ha surgido un error"
+msgstr "Oops, an error has occurred"
+
+#: templates/404.html:8
+msgid "Los hackers nos equivocamos algunas veces :)"
+msgstr "Hackers sometimes make mistakes :)"

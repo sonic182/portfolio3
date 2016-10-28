@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.utils.translation import ugettext as _
@@ -29,12 +29,12 @@ def show(request, id):
         student = StudentForm(request.POST)
         if student.is_valid():
             student_obj = student.save(commit=False)
-            student_obj.course = Course.objects.get(id=id)
+            student_obj.course = get_object_or_404(Course, id=id)
             student_obj.save()
             msg = 'Nuevo estudiante: <br>{name} <br>{email} <br>{phone}'.format(name=student_obj.name, email=student_obj.email, phone=student_obj.phone, )
             send_mail('Nuevo Student Mogollon Cursos', msg, 'johanderson@mogollon.com.ve', ['johander1822@gmail.com'], fail_silently=False)
             return redirect('courses_thanks')
-    course = Course.objects.get(id=id)
+    course = get_object_or_404(Course, id=id)
     course.views += 1
     course.save()
     return render(request, 'courses/show.html', {

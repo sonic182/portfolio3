@@ -23,3 +23,4 @@ processes       = 1
 # clear environment on exit
 vacuum          = true
 http          = :8000
+logto          = log/production.log

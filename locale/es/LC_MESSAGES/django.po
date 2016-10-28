@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-24 20:50+0000\n"
+"POT-Creation-Date: 2016-10-28 20:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: courses/models.py:33
+#: courses/models.py:41
 msgid "name"
 msgstr "nombre"
 
-#: courses/models.py:34
+#: courses/models.py:42
 msgid "email"
 msgstr "correo"
 
-#: courses/models.py:35
+#: courses/models.py:43
 msgid "phone"
 msgstr "teléfono"
 
 #: courses/templates/courses/index.html:6 courses/views.py:15
-#: home/templates/layout/footer.html:14 home/templates/layout/navbar.html:83
+#: home/templates/layout/footer.html:15 home/templates/layout/navbar.html:83
 msgid "Cursos"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 "Desarrollador Full Stack, freelancer, linux, ruby, python and nodejs "
 "developer"
 
-#: courses/views.py:41 courses/views.py:42
+#: courses/views.py:43 courses/views.py:44
 msgid "Course"
 msgstr "Curso"
 
@@ -1202,17 +1202,17 @@ msgstr ""
 msgid "Index of %(directory)s"
 msgstr ""
 
-#: home/templates/base.html:32
+#: home/templates/base.html:33
 msgid ""
 "Este sitio web utiliza cookies para asegurarse de obtener la mejor "
 "experiencia en nuestro sitio web"
 msgstr ""
 
-#: home/templates/base.html:32
+#: home/templates/base.html:33
 msgid "Más información"
 msgstr ""
 
-#: home/templates/base.html:32
+#: home/templates/base.html:33
 msgid "https://es.wikipedia.org/wiki/Cookie_(informática)"
 msgstr ""
 
@@ -1371,17 +1371,18 @@ msgid ""
 "una <b>prueba gratis</b> si así lo desea. <br>"
 msgstr ""
 
-#: home/templates/layout/footer.html:16
+#: home/templates/layout/footer.html:14 home/templates/layout/navbar.html:72
+#: home/templates/layout/navbar.html:79
+msgid "Portfolio"
+msgstr "Portafolio"
+
+#: home/templates/layout/footer.html:17
 msgid "Blog Personal"
 msgstr ""
 
 #: home/templates/layout/navbar.html:69 home/templates/layout/navbar.html:76
 msgid "Inicio"
 msgstr ""
-
-#: home/templates/layout/navbar.html:72 home/templates/layout/navbar.html:79
-msgid "Portfolio"
-msgstr "Portafolio"
 
 #: home/templates/layout/navbar.html:73 home/templates/layout/navbar.html:80
 msgid "Contacto"
@@ -1405,10 +1406,18 @@ msgstr "Johanderson | Portafolio"
 msgid "portfolio_meta_description"
 msgstr "Algunos de mis trabajos freelance."
 
-#: portfolio3/settings.py:152
+#: portfolio3/settings.py:160
 msgid "Spanish"
 msgstr ""
 
-#: portfolio3/settings.py:153
+#: portfolio3/settings.py:161
 msgid "English"
+msgstr ""
+
+#: templates/404.html:7
+msgid "Ops, ha surgido un error"
+msgstr ""
+
+#: templates/404.html:8
+msgid "Los hackers nos equivocamos algunas veces :)"
 msgstr ""
