@@ -7,10 +7,10 @@ from django.dispatch import receiver
 from ckeditor_uploader.fields import RichTextUploadingField
 
 class Course(models.Model):
-    picture = models.ImageField(upload_to='courses_pics')
-    title = models.CharField(max_length=60)
+    title = models.CharField(max_length=160)
     description = RichTextUploadingField()
     meta_description = models.CharField(max_length=160, default='')
+    picture = models.ImageField(upload_to='courses_pics')
     author = models.CharField(max_length=100, default='Johanderson')
     price = models.CharField(max_length=100, default='')
     place = models.CharField(max_length=100, default='')
