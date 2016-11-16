@@ -10,3 +10,9 @@ def portfolio(request):
         'title': _('portfolio_meta_title'),
         'meta_description': _('portfolio_meta_description'),
     })
+
+def about(request):
+    return render(request, 'home/about.html', {
+        'title': _('about_meta_title'),
+        'meta_description': _('about_meta_description'),
+    })
