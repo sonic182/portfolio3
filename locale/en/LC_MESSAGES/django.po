@@ -1286,7 +1286,7 @@ msgstr ""
 
 #: home/templates/home/index.html:82
 msgid "No esperes más y pide tu tienda en línea"
-msgstr "Go ahead and ask your online store"
+msgstr "Go ahead and ask for your online store"
 
 #: home/templates/home/index.html:88
 msgid "Landing Page"
@@ -1310,7 +1310,7 @@ msgid ""
 "utilizar tecnologías <b>gratuitas</b> altamente escalables, eficientes y "
 "ágiles para un buen producto de software."
 msgstr ""
-"With the OpenSource power and Free Software communities can use <b> free </"
+"With the OpenSource power and Software communities we can use <b> free </"
 "b> technologies, highly scalable, efficient and agile for a good software "
 "product."
 
@@ -1324,7 +1324,7 @@ msgstr ""
 
 #: home/templates/home/portfolio.html:19
 msgid "Envío y recepción"
-msgstr "Sending and receiving app"
+msgstr "Package Sending and receiving"
 
 #: home/templates/home/portfolio.html:21
 msgid "EYR description"
@@ -1376,7 +1376,7 @@ msgid ""
 "Para cualquiera de los servicios ponerse en contacto. <br>Puede optar por "
 "una <b>prueba gratis</b> si así lo desea. <br>"
 msgstr ""
-"For any service contact. <br> can opt for a <b> Trial </b> if desired. <br>"
+"For any service just give me a touch. <br> can choose for a <b> Trial </b> if desired. <br>"
 
 #: home/templates/layout/footer.html:14 home/templates/layout/navbar.html:72
 #: home/templates/layout/navbar.html:79
