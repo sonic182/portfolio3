@@ -7,7 +7,10 @@ class HomeSitemap(sitemaps.Sitemap):
     i18n = True
 
     def items(self):
-        return ['homepage', 'portfolio']
+        return [
+            'homepage',
+            # 'portfolio'
+        ]
 
     def location(self, item):
         return reverse(item)
