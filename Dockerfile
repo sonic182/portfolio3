@@ -9,7 +9,7 @@ RUN apt-get install -y nodejs gettext \
     && rm -rf /var/lib/apt/lists/*
 
 ADD package.json /app/
-RUN npm install --silent
+RUN npm install -g yarn && yarn install
 
 ADD requirements.txt /app/
 RUN pip install -r requirements.txt

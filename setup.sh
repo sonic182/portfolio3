@@ -7,6 +7,7 @@ case $1 in
   echo "gulp watch starts a django dev server"
   # $PYTHON manage.py runserver & gulp watch && fg
   gulp watch
+  # $PYTHON manage.py runserver
 ;;
 "migrate")
   $PYTHON manage.py makemigrations

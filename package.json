@@ -23,7 +23,8 @@
     "gulp-uglify": "^2.0.0",
     "jquery": "^2.2.4",
     "pump": "^1.0.1",
-    "rollup-plugin-node-resolve": "^2.0.0"
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "yuglify": "^0.1.4"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",

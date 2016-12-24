@@ -70,10 +70,10 @@ INSTALLED_APPS = [
 ]
 
 # must be MIDDLEWARE but just for compatibility...
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-   'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -171,7 +171,9 @@ LOCALE_PATHS = (
 
 STATIC_URL = environ.get('STATIC_URL') or  '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "assets"),
+    # os.path.join(BASE_DIR, "node_modules"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "public/static")
 
@@ -193,8 +195,35 @@ STATICFILES_FINDERS = (
 )
 
 PIPELINE = {
-    'ENABLED': True
+    'ENABLED': True,
+    'YUGLIFY_BINARY': "{base}/node_modules/.bin/yuglify".format(base=BASE_DIR)
 }
+
+PIPELINE['STYLESHEETS'] = {
+  'home': {
+    'source_filenames': (
+      'scss/app.scss',
+    ),
+    'output_filename': 'css/main.css',
+    'extra_context': {
+      'media': 'screen,projection',
+    },
+  },
+}
+
+
+# PIPELINE['JAVASCRIPT'] = {
+#   'homee': {
+#     'source_filenames': (
+#       'js/main.browserify.js',
+#     ),
+#     'output_filename': 'js/app2.js',
+#   },
+# }
+
+PIPELINE['COMPILERS'] = (
+  'libsasscompiler.LibSassCompiler',
+)
 
 # DJANGO SITES
 SITE_ID=1

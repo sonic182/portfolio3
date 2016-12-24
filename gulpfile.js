@@ -4,13 +4,13 @@ var gulp       = require('gulp'),
     rollup     = require('gulp-rollup'),
     sourcemaps = require('gulp-sourcemaps'),
     babel = require('gulp-babel'),
-    sass = require('gulp-sass'),
+    // sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     nodeResolve = require('rollup-plugin-node-resolve'),
     spawn = require('child_process').spawn;
 
-const static_path = './static';
+const static_path = './static/app';
 let rollupOpts = {
   entry: './assets/js/main.js',
   allowRealFiles: true,
@@ -70,21 +70,21 @@ gulp.task('fonts', () => {
   .pipe(gulp.dest(`${static_path}/fonts`))
 })
 
-gulp.task('sass', () => {
- return gulp.src('./assets/scss/**/*.scss')
-  // .pipe(sourcemaps.init())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  // .pipe(sourcemaps.write())
-  .pipe(gulp.dest(`${static_path}`));
-})
+// gulp.task('sass', () => {
+//  return gulp.src('./assets/scss/**/*.scss')
+//   // .pipe(sourcemaps.init())
+//   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+//   // .pipe(sourcemaps.write())
+//   .pipe(gulp.dest(`${static_path}`));
+// })
 
 gulp.task('django', () => {
   const runserver = spawn('./env/bin/python', ['manage.py', 'runserver'], { stdio: 'inherit', stderr: 'inherit' });
 })
 
-gulp.task('watch', ['scripts', 'sass', 'fonts', 'django'], () => {
+gulp.task('watch', ['scripts', 'fonts', 'django'], () => {
   gulp.watch('assets/js/**/*.js', ['scripts'])
-  gulp.watch('assets/scss/**/*.scss', ['sass'])
+  // gulp.watch('assets/scss/**/*.scss', ['sass'])
 })
 
-gulp.task('build', ['scripts', 'sass', 'fonts'])
+gulp.task('build', ['scripts', 'fonts'])

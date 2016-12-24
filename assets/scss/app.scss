@@ -1,9 +1,13 @@
 @import "./custom/variables";
 
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$icon-font-path: "/static/app/fonts/";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-$fa-font-path:        "/static/fonts";
-@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+$fa-font-path:        "/static/app/fonts";
+// $fa-font-path:        "/static/font-awesome/fonts/";
+// @import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
 
 // @import "../font-awesome/css/font-awesome.min.css";
 
