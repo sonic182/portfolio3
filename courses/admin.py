@@ -1,9 +1,12 @@
+from courses import models
+
 from django.contrib import admin
-from . import models
+
 
 @admin.register(models.Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('title', 'active', 'start_date', 'views', 'created_at', 'updated_at')
+    list_display = ('title', 'active', 'preview_url', 'start_date', 'views',
+                    'created_at', 'updated_at')
     list_filter = ('title', 'active', 'start_date', 'created_at', 'updated_at')
     actions = ['active', 'deactive']
 
@@ -16,8 +19,10 @@ class CourseAdmin(admin.ModelAdmin):
 
 @admin.register(models.Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone', 'course', 'created_at', 'updated_at')
-    list_filter = ('name', 'email', 'phone', 'course__title', 'created_at', 'updated_at')
+    list_display = ('name', 'email', 'phone', 'course', 'created_at',
+                    'updated_at')
+    list_filter = ('name', 'email', 'phone', 'course__title', 'created_at',
+                   'updated_at')
 
 
 @admin.register(models.MailList)

@@ -15,7 +15,7 @@
     </div>
     <div class="col-sm-4 col-md-3 pull-left course_info_md">
       <div class="subscription_form">
-        <form action="{% url 'courses_show' id=course.id %}" method="post" class="panel panel-default bootstrap_form">
+        <form action="{% url 'courses_show' _id=course.id %}" method="post" class="panel panel-default bootstrap_form">
           {% csrf_token %}
           <div class="panel-body">
             <ul class="list-unstyled">

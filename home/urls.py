@@ -1,10 +1,5 @@
 from django.conf.urls import url
-# from django.conf import settings
-# from django.contrib import admin
-# from django.conf.urls.static import static
-
-# from home import views as home_views
-from . import views
+from home import views
 
 urlpatterns = [
     url(r'^$', views.home, name='homepage'),

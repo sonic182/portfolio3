@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.sitemaps import Sitemap
 from courses.models import Course
 
+
 class CoursesSitemap(sitemaps.Sitemap):
     changefreq = "daily"
     priority = 0.5
@@ -16,7 +17,8 @@ class CoursesSitemap(sitemaps.Sitemap):
         return obj.updated_at
 
     def location(self, item):
-        return reverse('courses_show', kwargs={'id': item.id })
+        return reverse('courses_show', kwargs={'_id': item.id})
+
 
 class CoursesStaticSitemap(sitemaps.Sitemap):
     priority = 0.5

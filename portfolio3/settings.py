@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
-import os
 from django.utils.translation import ugettext_lazy as _
+import os
 
 environ = os.environ
 env = environ.get('PYTHON_ENV') or 'development'
@@ -32,10 +32,10 @@ if env == 'production':
 
     SECRET_KEY = environ.get('SECRET_KEY')
     DEBUG = False
-elif env== 'test':
+elif env == 'test':
     SECRET_KEY = '+v%(ju0tm#(qg8g0a+kcjkn#6$9tt8qbue3^ces^w$qqikhj=l'
     DEBUG = True
-else: # development
+else:  # development
     # mailcatcher
     EMAIL_HOST = '127.0.0.1'
     EMAIL_HOST_USER = ''
@@ -110,8 +110,8 @@ WSGI_APPLICATION = 'portfolio3.wsgi.application'
 if env == 'production':
     DATABASES = {
         'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db/production.sqlite3'),
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db/production.sqlite3'),
         }
     }
 else:
@@ -157,8 +157,8 @@ USE_TZ = True
 
 # I18n
 LANGUAGES = [
-  ('es', _('Spanish')),
-  ('en', _('English')),
+    ('es', _('Spanish')),
+    ('en', _('English')),
 ]
 
 LOCALE_PATHS = (
@@ -169,7 +169,7 @@ LOCALE_PATHS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = environ.get('STATIC_URL') or  '/static/'
+STATIC_URL = environ.get('STATIC_URL') or '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "assets"),
@@ -177,13 +177,13 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "public/static")
 
-MEDIA_URL = environ.get('MEDIA_URL') or  '/media/'
+MEDIA_URL = environ.get('MEDIA_URL') or '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "public/media")
 
 # CKEDITOR
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 CKEDITOR_UPLOAD_PATH = "ckeditor_uploads/"
-CKEDITOR_IMAGE_BACKEND= 'pillow'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 # PIPELINE
 
@@ -200,15 +200,15 @@ PIPELINE = {
 }
 
 PIPELINE['STYLESHEETS'] = {
-  'home': {
-    'source_filenames': (
-      'scss/app.scss',
-    ),
-    'output_filename': 'css/main.css',
-    'extra_context': {
-      'media': 'screen,projection',
+    'home': {
+        'source_filenames': (
+            'scss/app.scss',
+        ),
+        'output_filename': 'css/main.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
     },
-  },
 }
 
 
@@ -222,8 +222,8 @@ PIPELINE['STYLESHEETS'] = {
 # }
 
 PIPELINE['COMPILERS'] = (
-  'libsasscompiler.LibSassCompiler',
+    'libsasscompiler.LibSassCompiler',
 )
 
 # DJANGO SITES
-SITE_ID=1
+SITE_ID = 1

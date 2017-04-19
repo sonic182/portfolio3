@@ -13,16 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
 from django.conf import settings
-from django.contrib import admin
-from django.conf.urls.static import static
-from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.i18n import i18n_patterns
+from django.conf.urls import include
+from django.conf.urls.static import static
+from django.conf.urls import url
+from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 
-from home import views as home_views
+from courses.sitemap import CoursesSitemap
+from courses.sitemap import CoursesStaticSitemap
 from home.sitemap import HomeSitemap
-from courses.sitemap import CoursesSitemap, CoursesStaticSitemap
 
 sitemaps = {
     'HomeSitemap': HomeSitemap,
@@ -33,7 +34,8 @@ sitemaps = {
 urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+        name='django.contrib.sitemaps.views.sitemap'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 
