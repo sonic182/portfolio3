@@ -1,0 +1,7 @@
+django
+django-ckeditor
+django-pipeline
+django-widget-tweaks
+pillow
+uwsgi
+libsasscompiler
