@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
-from django.utils.translation import ugettext_lazy as _
 import os
+from django.utils.translation import ugettext_lazy as _
 
 environ = os.environ
 env = environ.get('PYTHON_ENV') or 'development'
@@ -61,12 +61,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.sites',
-    'home',
-    'courses',
+    # third parts apps
     'ckeditor',
     'ckeditor_uploader',
     'widget_tweaks',
     'pipeline',
+    # my apps
+    'home',
+    'courses',
 ]
 
 # must be MIDDLEWARE but just for compatibility...
