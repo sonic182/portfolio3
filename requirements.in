@@ -5,3 +5,4 @@ django-widget-tweaks
 pillow
 uwsgi
 libsasscompiler
+dj-database-url

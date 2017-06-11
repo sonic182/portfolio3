@@ -4,6 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
+dj-database-url==0.4.2
 django-ckeditor==5.2.2
 django-pipeline==1.6.12
 django-widget-tweaks==1.4.1
