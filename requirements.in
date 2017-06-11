@@ -7,3 +7,4 @@ uwsgi
 libsasscompiler
 dj-database-url
 psycopg2
+whitenoise
