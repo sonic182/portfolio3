@@ -6,3 +6,4 @@ pillow
 uwsgi
 libsasscompiler
 dj-database-url
+psycopg2
