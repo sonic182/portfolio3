@@ -2,18 +2,25 @@ version: '2'
 services:
   #  db:
   #    image: postgres
+  nginx:
+    image: nginx:1.11
+    volumes:
+      - ./compose/nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - 3000:80
   web:
     build: .
+    command: "uwsgi --ini uwsgi.ini"
     #  command: python manage.py runserver 0.0.0.0:8000
-    restart: always
-    volumes:
-      - ./db:/app/db
-      - ./public/static:/app/public/static
-      - ./public/media:/app/public/media
-      - ./log:/app/log
-    env_file:
-    - .env
-    ports:
-      - "8000:8000"
+    # restart: always
+    # volumes:
+    #   - ./db:/app/db
+    #   - ./public/static:/app/public/static
+    #   - ./public/media:/app/public/media
+    #   - ./log:/app/log
+    # env_file:
+    # - .env
+    # ports:
+    #   - "8000:8000"
       #  depends_on:
       #    - db

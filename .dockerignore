@@ -10,8 +10,8 @@ media/*
 node_modules/
 ignore/*
 
-
-
+# .env
+# uwsgi.ini
 
 public/static/
 public/media/

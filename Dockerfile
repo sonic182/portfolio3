@@ -1,16 +1,17 @@
-FROM python:3.5
+FROM python:3.5.2-slim
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /app
 WORKDIR /app
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
-RUN apt-get install -y nodejs gettext \
-    && npm install -g gulp \
+RUN apt-get update && apt-get install curl build-essential -y && \
+    curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    apt-get install -y nodejs gettext \
+    && npm install -g gulp yarn \
     && rm -rf /var/lib/apt/lists/*
 
 ADD package.json /app/
-RUN npm install -g yarn && yarn install
+RUN yarn install
 
 ADD requirements.txt /app/
 RUN pip install -r requirements.txt
@@ -21,4 +22,4 @@ RUN chmod +x entrypoint.sh \
     && python manage.py collectstatic --noinput \
     && python manage.py compilemessages
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+# ENTRYPOINT ["/app/entrypoint.sh"]

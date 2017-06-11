@@ -11,7 +11,7 @@ node_modules/
 ignore/*
 
 .env
-uwsgi.ini
+# uwsgi.ini
 
 public/static/
 public/media/
