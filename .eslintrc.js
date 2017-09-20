@@ -26,6 +26,8 @@ module.exports = {
         ]
     },
     "globals": {
-      "require": true
+      "require": true,
+      "$": true,
+      "ScrollMagic": true,
     }
 };

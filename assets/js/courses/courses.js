@@ -1,5 +1,5 @@
 export function Courses () {
-  var controller = new ScrollMagic.Controller();
+  // var controller = new ScrollMagic.Controller();
 
   // new ScrollMagic.Scene({triggerElement: '#footer'})
   // .setClassToggle('.navbar-default','navbar-gone')
@@ -7,15 +7,15 @@ export function Courses () {
 
   var elem = $('.subscription_form');
   var elem2 = $('.course_info_md');
-  var $window = $(window)
+  var $window = $(window);
 
   if (elem.length != 0){
     $(window).scroll(() => {
       // console.log(elem.position())
       // console.log()
       // console.log(elem.css('position'))
-      var elemTop = elem2.offset().top
-      var windowTop = $window.scrollTop()
+      var elemTop = elem2.offset().top;
+      var windowTop = $window.scrollTop();
       // console.log(`${elemTop} <= ${windowTop}`)
       if ( elemTop <= windowTop ){
         // console.log(elem.parent().width())
@@ -25,7 +25,7 @@ export function Courses () {
               width: elem.parent().width().toString(),
               position: 'fixed',
               top: '15px'
-            })
+            });
           }
         }
       }else{
@@ -34,10 +34,10 @@ export function Courses () {
             width: '100%',
             position: 'relative',
             top: 'auto'
-          })
+          });
         }
       }
-    })
+    });
   }
 
 }

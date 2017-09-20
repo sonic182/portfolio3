@@ -3,115 +3,31 @@
 var gulp       = require('gulp'),
   rollup = require('rollup-stream'),
   source = require('vinyl-source-stream'),
-  sourcemaps = require('gulp-sourcemaps'),
-  babel = require('gulp-babel'),
-  // sass = require('gulp-sass'),
-  uglify = require('gulp-uglify'),
-  pump = require('pump'),
+  babel = require('rollup-plugin-babel'),
+  uglify = require('rollup-plugin-uglify'),
   nodeResolve = require('rollup-plugin-node-resolve'),
   spawn = require('child_process').spawn;
 
 const static_path = './static/app';
-let rollupOpts = {
-  input: './assets/js/main.js',
-  allowRealFiles: true,
-  context: 'window',
-  plugins: [
-    nodeResolve({
-      // use "jsnext:main" if possible
-      // – see https://github.com/rollup/rollup/wiki/jsnext:main
-      jsnext: true,  // Default: false
-
-      // use "main" field or index.js, even if it's not an ES6 module
-      // (needs to be converted from CommonJS to ES6
-      // – see https://github.com/rollup/rollup-plugin-commonjs
-      main: true,  // Default: true
-
-      // if there's something your bundle requires that you DON'T
-      // want to include, add it to 'skip'. Local and relative imports
-      // can be skipped by giving the full filepath. E.g.,
-      // `path.resolve('src/relative-dependency.js')`
-      //  skip: [ 'some-big-dependency' ],  // Default: []
-
-      // some package.json files have a `browser` field which
-      // specifies alternative files to load for people bundling
-      // for the browser. If that's you, use this option, otherwise
-      // pkg.browser will be ignored
-      browser: true,  // Default: false
-
-      // not all files you want to resolve are .js files
-      extensions: [ '.js', '.json' ],  // Default: ['.js']
-
-      // whether to prefer built-in modules (e.g. `fs`, `path`) or
-      // local ones with the same names
-    //  preferBuiltins: false  // Default: true
-
-    })
-  ]
-};
-
-// gulp.task('scripts', () => {
-//   pump([
-//     gulp.src('./assets/**/*.js'),
-//     rollup(rollupOpts),
-//     babel({
-//       presets: ['es2015']
-//     }),
-//     uglify(),
-//     gulp.dest(`${static_path}`)
-//   ]);
-//
-// });
 
 gulp.task('scripts', function() {
   return rollup({
     input: './assets/js/main.js',
     format: 'umd',
+    context: 'window',
     plugins: [nodeResolve({
-      // use "module" field for ES6 module if possible
-      module: true, // Default: true
-
-      // use "jsnext:main" if possible
-      // – see https://github.com/rollup/rollup/wiki/jsnext:main
       jsnext: true,  // Default: false
-
-      // use "main" field or index.js, even if it's not an ES6 module
-      // (needs to be converted from CommonJS to ES6
-      // – see https://github.com/rollup/rollup-plugin-commonjs
       main: true,  // Default: true
-
-      // some package.json files have a `browser` field which
-      // specifies alternative files to load for people bundling
-      // for the browser. If that's you, use this option, otherwise
-      // pkg.browser will be ignored
       browser: true,  // Default: false
-
-      // not all files you want to resolve are .js files
       extensions: [ '.js', '.json' ],  // Default: ['.js']
-
-      // whether to prefer built-in modules (e.g. `fs`, `path`) or
-      // local ones with the same names
-      preferBuiltins: false,  // Default: true
-
-      // Lock the module search in this path (like a chroot). Module defined
-      // outside this path will be mark has external
-      // jail: '/my/jail/path', // Default: '/'
-
-      // If true, inspect resolved files to check that they are
-      // ES2015 modules
-      // modulesOnly: true, // Default: false
-
-      // Any additional options that should be passed through
-      // to node-resolve
-      // customResolveOptions: {
-      //   moduleDirectory: 'js_modules'
-      // }
-    })]
+    }),
+    babel({
+      exclude: 'node_modules/**'
+    }),
+    uglify(),
+    ]
   })
-    // give the file the name you want to output with.
     .pipe(source('js/main.js'))
-
-    // and output to ./dist/app.js as normal.
     .pipe(gulp.dest(static_path));
 });
 
@@ -123,16 +39,8 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest(`${static_path}/fonts`));
 });
 
-// gulp.task('sass', () => {
-//  return gulp.src('./assets/scss/**/*.scss')
-//   // .pipe(sourcemaps.init())
-//   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-//   // .pipe(sourcemaps.write())
-//   .pipe(gulp.dest(`${static_path}`));
-// })
-
 gulp.task('django', () => {
-  const runserver = spawn('./env/bin/python', ['manage.py', 'runserver'], { stdio: 'inherit', stderr: 'inherit' });
+  const runserver = spawn('python', ['manage.py', 'runserver'], { stdio: 'inherit', stderr: 'inherit' });
 });
 
 gulp.task('watch', ['scripts', 'fonts', 'django'], () => {
