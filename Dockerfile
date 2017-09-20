@@ -5,7 +5,7 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN apt-get update && apt-get install curl build-essential -y && \
-    curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install -y nodejs gettext \
     && npm install -g gulp yarn \
     && rm -rf /var/lib/apt/lists/*
