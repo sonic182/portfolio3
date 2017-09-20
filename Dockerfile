@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install curl build-essential -y && \
     && rm -rf /var/lib/apt/lists/*
 
 ADD package.json /app/
+ADD yarn.lock /app/
 RUN yarn install
 
 ADD requirements.txt /app/

@@ -12,7 +12,7 @@ var gulp       = require('gulp'),
 
 const static_path = './static/app';
 let rollupOpts = {
-  entry: './assets/js/main.js',
+  input: './assets/js/main.js',
   allowRealFiles: true,
   context: 'window',
   plugins: [
