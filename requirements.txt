@@ -18,5 +18,5 @@ pillow==4.2.1
 psycopg2==2.7.3.1
 pytz==2017.2              # via django
 six==1.11.0               # via libsass
-uwsgi==2.0.15
+uwsgi<2.1.0
 whitenoise==3.3.0

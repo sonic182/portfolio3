@@ -1,28 +1,28 @@
-version: '2'
+version: '3.3'
+
 services:
-  #  db:
-  #    image: postgres
   db:
-    image: postgres:9.6
-  nginx:
-    image: nginx:1.11
+    image: postgres:9
+    env_file:
+      - db.env
+    networks:
+      - internal
     volumes:
-      - ./compose/nginx/conf.d:/etc/nginx/conf.d
-    ports:
-      - 3000:80
+      - ./postgres-data:/var/lib/postgresql/data
+
   web:
     build: .
     command: "uwsgi --ini uwsgi.ini"
-    #  command: python manage.py runserver 0.0.0.0:8000
-    # restart: always
-    # volumes:
-    #   - ./db:/app/db
-    #   - ./public/static:/app/public/static
-    #   - ./public/media:/app/public/media
-    #   - ./log:/app/log
-    # env_file:
-    # - .env
-    # ports:
-    #   - "8000:8000"
-      #  depends_on:
-      #    - db
+    env_file:
+      - web.env
+    networks:
+      apps:
+        ipv4_address: 192.168.100.3
+      internal: null
+
+
+networks:
+  apps:
+    external: true
+  internal:
+    external: true
